@@ -150,7 +150,7 @@ export default class Edit extends Component {
                         </View>
 
                     <View style={styles.viewStyle}>
-                        <Text>رقم الهاتف:</Text>
+                        <Text style={styles.textstyle}>رقم الهاتف:</Text>
                         <Item regular style={styles.inputItemStyle}>
                             <Input style={styles.inputTextStyle}
                             value = {this.state.phoneNumber}
@@ -161,7 +161,7 @@ export default class Edit extends Component {
                     </View>
 
                     <View style={[styles.viewStyle, { marginTop: 25 }]}>
-                        <Text>العنوان:</Text>
+                        <Text style={styles.textstyle}>العنوان:</Text>
                         <Item regular style={styles.inputItemStyle}>
                             <Input style={styles.inputTextStyle}
                             value  = {this.state.address}
@@ -172,7 +172,7 @@ export default class Edit extends Component {
                     </View>
 
                     <View style={[styles.viewStyle, { marginTop: 25 }]}>
-                        <Text>صندوق البريد:</Text>
+                        <Text style={styles.textstyle}>صندوق البريد:</Text>
                         <Item regular style={styles.inputItemStyle}>
                             <Input style={styles.inputTextStyle}
                             value  = {this.state.poBox}
@@ -183,7 +183,7 @@ export default class Edit extends Component {
                     </View>
 
                     <View style={[styles.viewStyle, { marginTop: 25 }]}>
-                        <Text>المدينة:</Text>
+                        <Text style={styles.textstyle}>المدينة:</Text>
                         <Item regular style={styles.inputItemStyle}>
                             <Input style={styles.inputTextStyle}
                             value  = {this.state.city}
@@ -207,13 +207,18 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2', 
         elevation: 0,
         height: 50,
-        marginTop: 23
+        marginTop: 23,
+        fontFamily: "helvetica-regular"
     },
     titleStyle: { 
         color: '#323232', 
         fontSize: 14, 
-        alignSelf: 'center' 
+        alignSelf: 'center' ,
+        fontFamily: "helvetica-regular"
     },
+    textstyle:{
+        fontFamily: "helvetica-regular"
+    },  
     imageView: { 
         alignSelf: 'center', 
         borderWidth: 1,
@@ -240,11 +245,13 @@ const styles = StyleSheet.create({
     inputItemStyle: {
         marginTop: 5,
         width: '40%',
-        height: 30
+        height: 30,
+        fontFamily: "helvetica-regular"
     },
     inputTextStyle: { 
         textAlign: 'center', 
-        fontSize: 12 
+        fontSize: 12 ,
+        fontFamily: "helvetica-regular"
     },
     btnStyle2: {
         alignSelf: 'center',
@@ -256,20 +263,23 @@ const styles = StyleSheet.create({
         borderRadius: 0,
         marginTop: 20,
         marginBottom: 20,
-        elevation: 0
+        elevation: 0,
+        fontFamily: "helvetica-regular"
     },
     btnStyle:{
         backgroundColor : "grey",
-        height:20
+        height:34
     },
     btnTextStyle2: {
         color: '#fff',
-        fontSize: 12
+        fontSize: 12,
+        fontFamily: "helvetica-regular"
     },
     btnTextStyle :{
         color: '#fff',
         fontSize: 11,
         flex : 1,
         textAlign: "center",
+        fontFamily: "helvetica-regular"
     },
 })

@@ -103,17 +103,20 @@ const styles = StyleSheet.create({
     mainView: {
         width: '85%',
         alignSelf: 'center',
-        marginTop: 20
+        marginTop: 20,
+        textAlign:"right", fontFamily: "helvetica-regular"
     },
     textStyle: { 
-        fontWeight: 'bold',
         fontSize: 15,
-        marginBottom: 15
+        marginBottom: 15,
+        textAlign:"right",
+        fontFamily: "helvetica-bold"
     },
     textStyle2: {
         fontSize: 14,
         textAlign: 'right',
         color: '#787878',
-        marginBottom: 8
+        marginBottom: 8,
+        fontFamily: "helvetica-regular"
     },
 })

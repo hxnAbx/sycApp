@@ -22,13 +22,15 @@
     "version": "1.2.3",
     "orientation": "portrait",
     "icon": "./assets/appicon.png",
-    
     "updates": {
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": ""
-  }
+    "description": "",
+    "entryPoint": "node_modules/expo/AppEntry.js"
+  },
+  "displayName": "Sharjah Youth Project",
+  "name": "SYC"
 }

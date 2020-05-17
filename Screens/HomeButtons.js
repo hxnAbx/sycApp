@@ -235,11 +235,11 @@ export default class HomeButtons extends Component {
                             <Text style={styles.btnTextStyle3}>Daily Activities</Text>
                         </Button>
                             
-                        <Button transparent style={[styles.btnStyle3, { marginRight: 3 }]}>
+                        <Button transparent onPress={()=> Actions.eventCategory()} style={[styles.btnStyle3, { marginRight: 3 }]}>
                             <Text style={styles.btnTextStyle3}>Programs</Text>
                         </Button>
 
-                        <Button transparent style={styles.btnStyle2}>
+                        <Button transparent style={styles.btnStyle2} onPress={()=> Actions.summer()}>
                             <Text style={styles.btnTextStyle2}>Events</Text>
                         </Button>
                     </View>

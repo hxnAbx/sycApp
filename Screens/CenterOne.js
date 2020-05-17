@@ -6,6 +6,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import HomeButtons from './HomeButtons'
 import { Actions } from 'react-native-router-flux';
 import SideBar from '../Screens/SideBar'
+import MapScreen from './MapScreen'
+
 
 
 export default class CenterOne extends Component {
@@ -81,8 +83,8 @@ export default class CenterOne extends Component {
                         </View>  
 
                         <View style={styles.locationView}>
-                            <Image resizeMode='stretch' source={require('../Images/Location1.png')} style={styles.imageStyle2} />                                                       
-                        </View>                        
+                                <MapScreen />
+                            </View>                          
                     </View>                    
                 </Content>                
             </Container>
@@ -135,8 +137,9 @@ const styles = StyleSheet.create({
     },
     locationView: { 
         width: '49%', 
-        justifyContent: 'flex-end', 
-        alignItems: 'flex-end' 
+        height: 235,
+        alignSelf: 'flex-end',
+        marginBottom: 15
     },
     arrowsView: {
         flexDirection: 'row',

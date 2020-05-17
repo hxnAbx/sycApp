@@ -89,6 +89,7 @@ export default class NewsScreen extends Component {
         return (
             <View>
                 <Image 
+                resizeMode="contain"
                 source={{uri : "http://ycs.ae/himmah/app/webroot/img/user_upload/"+item.photo}}
                  style={styles.imageStyle} />
             </View>

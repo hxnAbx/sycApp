@@ -16,8 +16,7 @@ export default class HomeButtons extends Component {
             profileImg : null
         }
     }
-   
-
+    
 
     render() {
         return(     
@@ -25,31 +24,31 @@ export default class HomeButtons extends Component {
                 <View style={{ flexDirection: 'row-reverse', justifyContent: 'space-around' }}>
                     {this.props.Title == 'Home' ?
                         <Button style={styles.btnStyle2}>
-                            <Text style={styles.btnTextStyle2}>الصفحة الرئيسية</Text>
+                            <Text style={styles.btnTextStyle2}> الصفحة الرئيسية </Text>
                         </Button>
                             :
                     this.props.Title == 'Events' || this.props.Title == 'News' || this.props.Title == 'About' || this.props.Title == "Centers" || this.props.Title == "Login" || this.props.Title == 'photoGallery' || this.props.Title == "videoGallery" ? 
                         <Button style={styles.btnStyle3} onPress={() => Actions.homeAr()}>
-                            <Text style={styles.btnTextStyle3}>الصفحة الرئيسية</Text>
+                            <Text style={styles.btnTextStyle3}> الصفحة الرئيسية </Text>
                         </Button>  
                             :
                         <Button transparent style={styles.btnStyle} onPress={() => Actions.homeAr()}>
-                            <Text style={styles.btnTextStyle}>الصفحة الرئيسية</Text>
+                            <Text style={styles.btnTextStyle}> الصفحة الرئيسية </Text>
                         </Button>
                     }
 
                     {this.props.Title == 'About' || this.props.Title == "Centers" ?
                         <Button style={styles.btnStyle2}>
-                            <Text style={styles.btnTextStyle2}>من نحن</Text>
+                            <Text style={styles.btnTextStyle2}> من نحن  </Text>
                         </Button>
                             :
                     this.props.Title == 'Events' || this.props.Title == 'News' || this.props.Title == "Login" || this.props.Title == 'photoGallery' || this.props.Title == "videoGallery" ? 
                         <Button style={styles.btnStyle3} onPress={() => Actions.aboutAr()}>
-                            <Text style={styles.btnTextStyle3}>من نحن</Text>
+                            <Text style={styles.btnTextStyle3}> من نحن </Text>
                         </Button>
                             :
                         <Button transparent style={styles.btnStyle} onPress={() => Actions.aboutAr()}>
-                            <Text style={styles.btnTextStyle}>من نحن</Text>
+                            <Text style={styles.btnTextStyle}> من نحن  </Text>
                         </Button>
                     }
 
@@ -105,16 +104,16 @@ export default class HomeButtons extends Component {
 
                     {this.props.Title == 'News' || this.props.Title == 'photoGallery' || this.props.Title == "videoGallery" ?
                         <Button style={styles.btnStyle2}>
-                            <Text style={styles.btnTextStyle2}>المركزالإعلامي</Text>
+                            <Text style={styles.btnTextStyle2}>المركز الاعلامي</Text>
                         </Button>
                             :
                     this.props.Title == 'Events' || this.props.Title == 'About' || this.props.Title == "Centers" || this.props.Title == "Login" ? 
                         <Button style={styles.btnStyle3} onPress={() => Actions.newsScreenAr()}>
-                            <Text style={styles.btnTextStyle3}>المركزالإعلامي</Text>
+                            <Text style={styles.btnTextStyle3}>المركز الاعلامي</Text>
                         </Button>
                             :
                         <Button transparent style={styles.btnStyle} onPress={() => Actions.newsScreenAr()}>
-                            <Text style={styles.btnTextStyle}>المركزالإعلامي</Text>
+                            <Text style={styles.btnTextStyle}> المركز الاعلامي</Text>
                         </Button>
                     }
 
@@ -143,12 +142,12 @@ export default class HomeButtons extends Component {
                         )}
                         {!this.state.isUserloaded && (
                             <Button style={[styles.btnStyle2, { marginRight: 3 }]} onPress={() => Actions.loginAr()}>
-                            <Text style={styles.btnTextStyle2}>تسجیل الدخول</Text>
+                            <Text style={styles.btnTextStyle2}>تسجیل الدخول </Text>
                         </Button>
                         )}
                             
                         <Button transparent style={[styles.btnStyle3, { width: '17%' }]} onPress={() => Actions.himmahAr()}>
-                            <Text style={styles.btnTextStyle3}> اكتشف ھمة</Text>
+                            <Text style={styles.btnTextStyle3}> اكتشف ھمة </Text>
                         </Button>
                     </View>
                     :
@@ -164,12 +163,12 @@ export default class HomeButtons extends Component {
                          )}
                          {!this.state.isUserloaded && (
                              <Button transparent style={[styles.btnStyle, { marginRight: 3 }]} onPress={() => Actions.loginAr()}>
-                             <Text style={styles.btnTextStyle}>تسجيل الدخول</Text>
+                             <Text style={styles.btnTextStyle}>تسجیل الدخول </Text>
                          </Button> 
                          )}
                             
                         <Button transparent style={[styles.btnStyle2, { width: '17%' }]}>
-                            <Text style={[styles.btnTextStyle2, { fontSize: 10 }]}>اكتشف ھمة</Text>
+                            <Text style={[styles.btnTextStyle2, { fontSize: 7 }]}> اكتشف ھمة</Text>
                         </Button>
                     </View>
                     :
@@ -178,16 +177,16 @@ export default class HomeButtons extends Component {
 
                 {this.props.Title == "News" ? 
                     <View style={[styles.loginBtnView, { alignSelf: 'flex-start',flexDirection:'row-reverse' }]}>
-                        <Button style={[styles.btnStyle2, { marginRight: 3 }]} onPress={() => Actions.newsScreenAr()}>
-                            <Text style={styles.btnTextStyle2}>أخبارنا</Text>
+                        <Button style={[styles.btnStyle2, ]} onPress={() => Actions.newsScreenAr()}>
+                            <Text style={styles.btnTextStyle2}>أخبارنا </Text>
                         </Button>
                             
-                        <Button transparent style={[styles.btnStyle3, { marginRight: 3 }]} onPress={() => Actions.photoGalleryAr()}>
-                            <Text style={styles.btnTextStyle3}>الصور</Text>
+                        <Button transparent style={[styles.btnStyle3, {marginLeft : 3,marginRight:3} ]} onPress={() => Actions.photoGalleryAr()}>
+                            <Text style={styles.btnTextStyle3}>الصور </Text>
                         </Button>
 
-                        <Button transparent style={[styles.btnStyle3, { marginRight: 3 }]} onPress={() => Actions.videoGalleryAr()}>
-                            <Text style={styles.btnTextStyle3}>مقاطع الفیدیو</Text>
+                        <Button transparent style={styles.btnStyle3 } onPress={() => Actions.videoGalleryAr()}>
+                            <Text style={styles.btnTextStyle3}>مقاطع الفیدی </Text>
                         </Button>
                     </View>
                     :
@@ -197,15 +196,15 @@ export default class HomeButtons extends Component {
                 {this.props.Title == "photoGallery" ? 
                     <View style={[styles.loginBtnView, { alignSelf: 'flex-start' ,flexDirection:'row-reverse'  }]}>
                         <Button style={[styles.btnStyle3, { marginRight: 3 }]} onPress={() => Actions.newsScreenAr()}>
-                            <Text style={styles.btnTextStyle3}>أخبارنا</Text>
+                            <Text style={styles.btnTextStyle3}>أخبارنا </Text>
                         </Button>
                             
                         <Button transparent style={[styles.btnStyle2, { marginRight: 3 }]} onPress={() => Actions.photoGalleryAr()}>
-                            <Text style={styles.btnTextStyle2}>الصور</Text>
+                            <Text style={styles.btnTextStyle2}>الصور </Text>
                         </Button>
 
-                        <Button transparent style={[styles.btnStyle3, { marginRight: 3 }]}  onPress={() => Actions.videoGalleryAr()}>
-                            <Text style={styles.btnTextStyle3}>مقاطع الفیدیو</Text>
+                        <Button transparent style={styles.btnStyle3} onPress={() => Actions.videoGalleryAr()}>
+                            <Text style={styles.btnTextStyle3}>مقاطع الفیدی</Text>
                         </Button>
                     </View>
                     :
@@ -215,15 +214,15 @@ export default class HomeButtons extends Component {
                 {this.props.Title == "videoGallery" ? 
                     <View style={[styles.loginBtnView, { alignSelf: 'flex-start'  ,flexDirection:'row-reverse'   }]}>
                         <Button style={[styles.btnStyle3, { marginRight: 3 }]} onPress={() => Actions.newsScreenAr()}>
-                            <Text style={styles.btnTextStyle3}>أخبارنا</Text>
+                            <Text style={styles.btnTextStyle3}>أخبارنا </Text>
                         </Button>
                             
                         <Button transparent style={[styles.btnStyle3, { marginRight: 3 }]} onPress={() => Actions.photoGalleryAr()}>
-                            <Text style={styles.btnTextStyle3}>الصور</Text>
+                            <Text style={styles.btnTextStyle3}>الصور </Text>
                         </Button>
 
-                        <Button transparent style={[styles.btnStyle2, { marginRight: 3 }]}  onPress={() => Actions.videoGalleryAr()}>
-                            <Text style={styles.btnTextStyle2}>مقاطع الفیدیو</Text>
+                        <Button transparent style={styles.btnStyle2} onPress={() => Actions.videoGalleryAr()}>
+                            <Text style={styles.btnTextStyle2}>مقاطع الفیدی</Text>
                         </Button>
                     </View>
                     :
@@ -233,15 +232,15 @@ export default class HomeButtons extends Component {
                 {this.props.Title == "Events" || this.props.Title == "Registration" ? 
                     <View style={[styles.loginBtnView, { alignSelf: 'flex-start', paddingLeft: 3 }]}>
                         <Button style={[styles.btnStyle3, { marginRight: 3, width: '17%' }]}>
-                            <Text style={styles.btnTextStyle3}>الأنشطة الیومیة</Text>
+                            <Text style={styles.btnTextStyle3}>الأنشطة اليومية</Text>
                         </Button>
                             
-                        <Button transparent style={[styles.btnStyle3, { marginRight: 3 }]}>
-                            <Text style={styles.btnTextStyle3}>البرامج</Text>
+                        <Button transparent style={[styles.btnStyle3, { marginRight: 3 }]} onPress={()=> Actions.eventCategoryAr()}>
+                            <Text style={styles.btnTextStyle3}>البرامج </Text>
                         </Button>
 
                         <Button transparent style={styles.btnStyle2}>
-                            <Text style={styles.btnTextStyle2}>الفعالیات</Text>
+                            <Text style={styles.btnTextStyle2}>الفعالیات </Text>
                         </Button>
                     </View>
                     :
@@ -283,7 +282,7 @@ export default class HomeButtons extends Component {
 const styles = StyleSheet.create({
     btnStyle: {
         width: '15%',
-        height: 30,
+        height: 25,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 0,
@@ -291,11 +290,12 @@ const styles = StyleSheet.create({
     },
     btnTextStyle: {
         color: '#323232',
-        fontSize: 10
+        fontSize: 8,
+        fontFamily: "helvetica-regular"
     },
     btnStyle2: {
         width: '15%',
-        height: 30,
+        height: 28,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#333333',
@@ -304,11 +304,13 @@ const styles = StyleSheet.create({
     },
     btnTextStyle2: {
         color: '#fff',
-        fontSize: 10
+        fontSize: 8,
+        fontFamily: "helvetica-regular",
+
     },
     btnStyle3: {
         width: '15%',
-        height: 30,
+        height: 28,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#ffffff',
@@ -317,7 +319,8 @@ const styles = StyleSheet.create({
     },
     btnTextStyle3: {
         color: '#333333',
-        fontSize: 10
+        fontSize: 8,
+        fontFamily: "helvetica-regular"
     },
     loginBtnView: { 
         flexDirection: 'row', 
@@ -325,9 +328,9 @@ const styles = StyleSheet.create({
         marginTop: 3
     },
     aboutBtnView: {
-        flexDirection: 'row-reverse',
+        flexDirection: 'row',
         marginTop: 3,
-        paddingLeft: '17%',
+        marginLeft: '18%',
         width: '100%'
     }
 })

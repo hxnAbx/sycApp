@@ -117,7 +117,9 @@ export default class SideBar extends Component {
                     <View style={styles.view2}>
                         <Octicons type='Octicons' name='info' size={20} color='#323232' /> 
                         <TouchableOpacity onPress={() => this.setState({ aboutView: !this.state.aboutView })}>
-                            <Text style={styles.textStyle}>About Us</Text>                
+                            <Text style={styles.textStyle}>About Us
+                            <MaterialCommunityIcons type='MaterialCommunityIcons' name='chevron-down' size={20} color='#323232' style={{marginTop:5}} /></Text> 
+                                           
                         </TouchableOpacity>
                     </View>
 
@@ -137,7 +139,9 @@ export default class SideBar extends Component {
                     <View style={styles.view2}>
                         <MaterialCommunityIcons type='MaterialCommunityIcons' name='file-document-box-outline' size={20} color='#323232' /> 
                         <TouchableOpacity onPress={() => this.setState({ memberView: !this.state.memberView })}>
-                            <Text style={styles.textStyle}>Membership</Text>    
+                            <Text style={styles.textStyle}>Membership
+                            <MaterialCommunityIcons type='MaterialCommunityIcons' name='chevron-down' size={20} color='#323232' style={{marginTop:5}} />
+                            </Text> 
                         </TouchableOpacity>                
                     </View>
 
@@ -155,9 +159,11 @@ export default class SideBar extends Component {
                     }
 
                     <View style={styles.view2}>
-                        <EvilIcons type='EvilIcons' name='calendar' size={20} color='#323232' /> 
+                    <MaterialCommunityIcons type='MaterialCommunityIcons' name='calendar-outline' size={20} color='#323232' /> 
                         <TouchableOpacity onPress={() => this.setState({ eventView: !this.state.eventView })}>
-                            <Text style={styles.textStyle}>Programs & Events</Text>                
+                            <Text style={styles.textStyle}>Programs & Events
+                            <MaterialCommunityIcons type='MaterialCommunityIcons' name='chevron-down' size={20} color='#323232' style={{marginTop:5}} />
+                            </Text>                
                         </TouchableOpacity>
                     </View>
 
@@ -166,7 +172,7 @@ export default class SideBar extends Component {
                             <TouchableOpacity>
                                 <Text style={styles.textStyle2}>- Daily Activities</Text>                
                             </TouchableOpacity>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={()=> Actions.eventCategory()}>
                                 <Text style={styles.textStyle2}>- Programs</Text>                
                             </TouchableOpacity>
                             <TouchableOpacity onPress={() => {Actions.summer(); this.setState({ eventView: false })}}>
@@ -180,7 +186,9 @@ export default class SideBar extends Component {
                     <View style={styles.view2}>
                         <MaterialIcons type='MaterialIcons' name='perm-media' size={20} color='#323232' /> 
                         <TouchableOpacity onPress={() => this.setState({ mediaView: !this.state.mediaView })}>
-                            <Text style={styles.textStyle}>Media Centre</Text>                
+                            <Text style={styles.textStyle}>Media Centre
+                            <MaterialCommunityIcons type='MaterialCommunityIcons' name='chevron-down' size={20} color='#323232' style={{marginTop:5}} />
+                            </Text>                
                         </TouchableOpacity>
                     </View>
 
@@ -203,9 +211,19 @@ export default class SideBar extends Component {
                     <View style={styles.view2}>
                         <FontAwesome type='FontAwesome' name='envelope-open-o' size={20} color='#323232' /> 
                         <TouchableOpacity onPress={() => {Actions.contactUs(); this.setState({ mediaView: false })}}>
-                            <Text style={styles.textStyle}>Contact Us</Text>                
+                            <Text style={styles.textStyle}>Contact Us
+                            <MaterialCommunityIcons type='MaterialCommunityIcons' name='chevron-down' size={20} color='#323232' style={{marginTop:5}} />
+                            </Text>                
                         </TouchableOpacity>
                     </View>
+                    {/* <View style={styles.view2}>
+                        <FontAwesome type='FontAwesome' name='envelope-open-o' size={20} color='#323232' /> 
+                        <TouchableOpacity onPress={() => {Actions.feedback(); this.setState({ mediaView: false })}}>
+                            <Text style={styles.textStyle}>Feedback</Text>                
+                        </TouchableOpacity>
+                    </View>
+                    */}
+                    
                     
                     {this.state.isUserloaded && (
                         <View style={styles.view2}>
@@ -217,7 +235,10 @@ export default class SideBar extends Component {
 
                     )}
 
-                    
+            <View style={styles.languageButtonsWrapper}>
+                    <Text style={styles.languageButtons} onPress={() => Actions.home()}>EN</Text>
+                    <Text style={styles.languageButtons} onPress={()=> Actions.homeAr()}>ع‎</Text>
+                    </View>
                 </Content>
 
                 <Footer style={styles.footerStyle}>
@@ -226,19 +247,19 @@ export default class SideBar extends Component {
                     </View>
 
                     <View style={styles.view3}>
-                        <TouchableOpacity>
+                    <TouchableOpacity onPress={() => Linking.openURL('http://www.instagram.com/shjyouth')}>
                             <Entypo type='Entypo' name='instagram' size={15} color='#323232' />    
-                        </TouchableOpacity> 
-                        <TouchableOpacity>
+                        </TouchableOpacity > 
+                        <TouchableOpacity  onPress={() => Linking.openURL('https://ar-ar.facebook.com/shjyouth/')}>
                             <EvilIcons type='EvilIcons' name='sc-facebook' size={20} color='#323232' />    
                         </TouchableOpacity> 
-                        <TouchableOpacity>
+                        <TouchableOpacity  onPress={() => Linking.openURL('http://twitter.com/shjyouth')}>
                             <AntDesign type='AntDesign' name='twitter' size={15} color='#323232' />    
                         </TouchableOpacity> 
-                        <TouchableOpacity>
+                        <TouchableOpacity  onPress={() => Linking.openURL('https://www.linkedin.com/company/sharjah-youth/')}>
                             <Entypo type='Entypo' name='linkedin' size={15} color='#323232' />    
                         </TouchableOpacity> 
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => Linking.openURL('https://www.youtube.com/user/youthshj/videos')}>
                             <FontAwesome type='FontAwesome' name='youtube' size={15} color='#323232' />    
                         </TouchableOpacity> 
                     </View>
@@ -253,6 +274,23 @@ const styles = StyleSheet.create({
         backgroundColor: '#c7c7c7',
         opacity: 0.9
     },
+    languageButtonsWrapper: {
+        width: 100,
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginLeft: '26%',zIndex:2,
+        marginTop:10,
+        marginBottom:10
+      },languageButtons: {
+        width: 30,
+        padding: 5,
+        backgroundColor: '#B3B3B3',
+        color: 'white',
+        textAlign: 'center',
+        fontFamily: "helvetica-ar"
+      },
     view1: {
         width: '85%',
         flexDirection: 'row',

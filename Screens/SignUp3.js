@@ -51,7 +51,7 @@ export default class SignUp3 extends Component {
     _pickDocument = async () => {
         let result = await DocumentPicker.getDocumentAsync({});
         this.setState({pfPhoto : result.uri});
-		  alert(result.uri);
+		 // alert(result.uri);
     }
     
 

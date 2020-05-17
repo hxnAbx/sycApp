@@ -146,17 +146,30 @@ export default class Profile extends Component {
                         <View style={[styles.view1, { marginRight: 20 }]}>
                             <Text style={styles.textStyle1}>فئة العضوية:</Text>
                             <Text style={styles.textStyle2}>{this.state.jsonResult.expiry_date}</Text>
+                            
                         </View>
 
                         <View style={styles.view1}>
                             <Text style={styles.textStyle1}>انتهاء العضوية:</Text>
                             <Text style={styles.textStyle2}>{this.state.jsonResult.membership}</Text>
+                            
                         </View>
                     </View>
-
+                    <View style={styles.row}> 
+                        <View style={styles.leftSide}>
+                        <Button style={styles.buttonConatiner} onPress={()=> Actions.attendenceAr() }>
+                            <Text style={styles.button}>سجل حضور المنتسب </Text>
+                            </Button>
+                        </View>
+                        <View style={styles.rightSide}>
+                        <Button style={styles.buttonConatiner} onPress={()=> Actions.uploadCertificationAr() }>
+                            <Text style={styles.button}>إضافة شهادة </Text>
+                            </Button>
+                        </View>
+                    </View>
                     <View style={styles.view2}>
-                        <Text>هل نسيت بطاقتك؟  </Text>
-                        <Text>يمكنك مسح الرمز هنا</Text>
+                        <Text style={styles.textStyle2}>هل نسيت بطاقتك؟  </Text>
+                        <Text style={styles.textStyle2}>يمكنك مسح الرمز هنا</Text>
                         <Button style={styles.btnStyle2} >
                             <Text style={styles.btnTextStyle2}>الماسح الضوئي</Text>
                         </Button>
@@ -176,10 +189,36 @@ const styles = StyleSheet.create({
         height: 50,
         marginTop: 23
     },
+    leftSide:{
+        marginLeft:"15%",
+        width:"30%",
+        marginTop:30
+    },
+    rightSide:{
+        marginLeft:"10%",
+        width:"30%",
+        marginTop:30
+    },row: {
+        flexDirection:"row",
+        width:"90%",
+        marginLeft:"5%"
+    },
+    buttonConatiner:{
+        height:30,
+        backgroundColor:"#2b2d2e",
+        marginTop:4
+    },button:{
+        color:"#fff",
+        fontSize:9,
+        textAlign:"center",
+        flex:1,
+        fontFamily: "helvetica-regular"
+    },
     titleStyle: { 
         color: '#323232', 
         fontSize: 14, 
-        alignSelf: 'center' 
+        alignSelf: 'center' ,
+        fontFamily: "helvetica-regular"
     },
     editIconView: { 
         height: 20, 
@@ -210,16 +249,20 @@ const styles = StyleSheet.create({
         marginTop: 5,
         //marginLeft: -20,
         color: '#323232',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        fontFamily: "helvetica-regular"
     },
     textStyle1: {
         backgroundColor: '#f2f2f2',
         color: '#343434',
         paddingLeft: 10,
-        width: 90
+        width: 90,
+        fontSize:12,
+        fontFamily: "helvetica-regular"
     },
     textStyle2: {
-        paddingLeft: 10
+        paddingLeft: 10,
+        fontFamily: "helvetica-regular"
     },
     mainView: { 
         alignSelf: 'center',
@@ -237,7 +280,7 @@ const styles = StyleSheet.create({
     },
     btnStyle2: {
         width: 120,
-        height: 30,
+        height: 40,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#4d4d4d',
@@ -248,6 +291,7 @@ const styles = StyleSheet.create({
     },
     btnTextStyle2: {
         color: '#fff',
-        fontSize: 12
+        fontSize: 12,
+        fontFamily: "helvetica-regular"
     }
 })

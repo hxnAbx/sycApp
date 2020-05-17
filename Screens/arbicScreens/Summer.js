@@ -229,7 +229,7 @@ export default class Summer extends Component {
                 </SafeAreaView>  
 
                 {this.state.swipeText ?
-                    <Text style={styles.title}>Swipe to Left</Text>                                          
+                    <Text style={styles.title}>↦ اسحب إلى اليسار   ↤   </Text>                                          
                     :
                     null
                 }
@@ -296,7 +296,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2',
         paddingRight: 5,
         paddingLeft: 5,
-        borderRadius: 3
+        borderRadius: 3,
+        fontFamily: "helvetica-regular"
     },
     mainView: {
         width: '85%',
@@ -307,12 +308,15 @@ const styles = StyleSheet.create({
     textStyle: { 
         fontWeight: 'bold',
         fontSize: 16,
-        marginBottom: 20
+        marginBottom: 20,
+        textAlign:"right",
+        fontFamily: "helvetica-regular"
     },
     textStyle2: {
         fontSize: 12,
         textAlign: 'justify',
-        color: '#787878'
+        color: '#787878',
+        fontFamily: "helvetica-regular"
     },
     lineStyle: {
         borderWidth: 1,
@@ -341,7 +345,7 @@ const styles = StyleSheet.create({
     },
     btnStyle2: {
         width: 120,
-        height: 30,
+        height: 40,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#4d4d4d',
@@ -352,7 +356,8 @@ const styles = StyleSheet.create({
     btnTextStyle2: {
         color: '#fff',
         fontSize: 12,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: "helvetica-regular",
     },
     arrowsView: {
         flexDirection: 'row',

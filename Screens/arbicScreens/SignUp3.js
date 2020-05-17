@@ -92,7 +92,7 @@ export default class SignUp3 extends Component {
 
                         <View>
                             <View>
-                                <Text style={{ fontSize: 10, fontWeight: '200' }}> المستندات المطلوبة </Text>
+                                <Text style={{ fontSize: 10, fontWeight: '200' ,fontFamily: "helvetica-regular" , textAlign:"right" }}> المستندات المطلوبة </Text>
                             </View>
 
                             {/* <Item regular style={styles.inputItemStyle}>
@@ -103,7 +103,7 @@ export default class SignUp3 extends Component {
                                 <Picker
                                     note
                                     mode="dropdown"
-                                    style={styles.document}
+                                    style={styles.pickerStyle}
                                     selectedValue={this.state.document}
                                     onValueChange={(val,index) => this.setState({document : val}) } 
                                     textStyle={{ fontSize: 10 }} 
@@ -115,12 +115,12 @@ export default class SignUp3 extends Component {
                             </View>
                         </View> 
 
-                        <Text style={[styles.textStyle, { marginTop: 15, marginBottom: 0 }]}>المستندات لمواطني دولة الإمارات العربية المتحدة</Text>
+                        <Text style={[styles.textStyle, { marginTop: 15, marginBottom: 0 ,fontFamily: "helvetica-regular" , textAlign:"right"}]}>المستندات لمواطني دولة الإمارات العربية المتحدة</Text>
 
                         <View style={{ marginTop: 5 }}>
-                            <Text style={{ fontSize: 13 }}>صورة شخصية رسمية بخلفية بيضاء</Text>
+                            <Text style={{ fontSize: 13,fontFamily: "helvetica-regular" , textAlign:"right" }}>صورة شخصية رسمية بخلفية بيضاء</Text>
 
-                            <View style={{ marginTop: 5 }}>
+                            <View style={{ marginTop: 5,alignSelf:"flex-end"}}>
                                 <View style={styles.imageView}>
                                     <Image
                                         style={styles.imageView}
@@ -135,13 +135,13 @@ export default class SignUp3 extends Component {
 
                         <View style={styles.lineStyle}></View>
 
-                        <Text style={[styles.textStyle, { marginBottom: 0 }]}>صورة جواز السفر</Text>
+                        <Text style={[styles.textStyle, { marginBottom: 0,fontFamily: "helvetica-regular" , textAlign:"right" }]}>صورة جواز السفر</Text>
 
-                        <View style={{ flexDirection: 'row' }}>
-                            <View style={{ marginTop: 5, marginRight: 20 }}>
+                        <View style={{ flexDirection: 'row-reverse' }}>
+                            <View style={{ marginTop: 5, marginRight: 20 ,alignSelf:"flex-end" }}>
                                 <Text style={styles.textStyle2}>صورة جواز السفر - الصفحة الأولى</Text>
 
-                                <View style={{ marginTop: 5 }}>
+                                <View style={{ marginTop: 5 , alignSelf:"flex-end" }}>
                                     <View style={styles.imageView}>
                                     <Image
                                         style={styles.imageView}
@@ -153,10 +153,10 @@ export default class SignUp3 extends Component {
                                     </Button>                            
                                 </View>
                             </View>
-                            <View style={{ marginTop: 5 }}>
+                            <View style={{ marginTop: 5 , alignSelf:"flex-end" }}>
                                 <Text style={styles.textStyle2}>صورة جواز السفر - الصفحة الأخيرة</Text>
 
-                                <View style={{ marginTop: 5 }}>
+                                <View style={{ marginTop: 5, alignSelf:"flex-end"}}>
                                     <View style={styles.imageView}>
                                     <Image
                                         style={styles.imageView}
@@ -172,13 +172,13 @@ export default class SignUp3 extends Component {
 
                         <View style={styles.lineStyle}></View>
 
-                        <Text style={[styles.textStyle, { marginBottom: 0 }]}>صورة من البطاقة الشخصية</Text>
+                        <Text style={[styles.textStyle, { marginBottom: 0 ,fontFamily: "helvetica-regular" , textAlign:"right"}]}>صورة من البطاقة الشخصية</Text>
 
-                        <View style={{ flexDirection: 'row' }}>
-                            <View style={{ marginTop: 5, marginRight: 20 }}>
+                        <View style={{ flexDirection: 'row-reverse' }}>
+                            <View style={{ marginTop: 5, marginLeft: 20 , alignSelf:"flex-end"}}>
                                 <Text style={styles.textStyle2}> صورة الهوية من الخلف</Text>
                                
-                                <View style={{ marginTop: 5 }}>
+                                <View style={{ marginTop: 5, alignSelf:"flex-end"  }}>
                                     <View style={styles.imageView}>
                                     <Image
                                         style={styles.imageView}
@@ -190,7 +190,7 @@ export default class SignUp3 extends Component {
                                     </Button>                            
                                 </View>
                             </View>
-                            <View style={{ marginTop: 5 }}>
+                            <View style={{ marginTop: 5, alignSelf:"flex-end"}}>
                                 <Text style={styles.textStyle2}>صورة الهوية من الأمام</Text>
 
                                 <View style={{ marginTop: 5 }}>
@@ -212,14 +212,19 @@ export default class SignUp3 extends Component {
                         <Text style={[styles.textStyle, { marginBottom: 0 }]}> الفحص الطبي</Text>
 
                         <View style={styles.viewStyle2}>
-                            <Text style={{ fontSize: 11 }}>الخطوة 1: انقر هنا للتنزيل</Text>
+                            <Text style={{ fontSize: 11 ,fontFamily: "helvetica-regular" , textAlign:"right" }}>الخطوة 1: انقر هنا للتنزيل</Text>
                             <TouchableOpacity style={styles.downloadIconView}>
                                 <Feather type='Feather' name='download' size={12} color='#323232' />
                             </TouchableOpacity>
                         </View>
 
                         <View style={styles.viewStyle2}>
-                            <Text style={{ fontSize: 11 }}>الخطوة 2: نسخة غير مسجلة</Text>
+                           <View style={{width:"100%"}} >
+                            <Text style={{ fontSize: 11,fontFamily: "helvetica-regular" , textAlign:"right" }}>
+                                الخطوة 2: نسخة غير مسجلة
+                                </Text>
+                           </View>
+                           
                             <View style={{ marginLeft: 10 }}>
                                 <View style={styles.imageView2}>
                                 <Image
@@ -238,7 +243,7 @@ export default class SignUp3 extends Component {
                         <View style={styles.innerView}>
                             <View style={styles.innerView2}>
                                 <View>
-                                    <Text style={{ fontSize: 10, fontWeight: '200' }}> وسيلة المواصلات</Text>
+                                    <Text style={{ fontSize: 10, fontWeight: '200' , fontFamily: "helvetica-regular" , textAlign:"right"  }}> وسيلة المواصلات</Text>
                                 </View>
 
                                 <View style={styles.pickerView}>
@@ -260,7 +265,7 @@ export default class SignUp3 extends Component {
 
                         <View style={styles.viewStyle}>
                             <View>
-                                <Text style={{ fontSize: 10 }}> منطقة</Text>
+                                <Text style={{ fontSize: 10 ,fontFamily: "helvetica-regular" , textAlign:"right" }}> منطقة</Text>
                             </View>
 
                             <View style={styles.pickerView}>
@@ -282,7 +287,7 @@ export default class SignUp3 extends Component {
                         <View style={styles.innerView}>
                             <View style={styles.innerView2}>
                                 <View>
-                                    <Text style={{ fontSize: 10, fontWeight: '200' }}> اللغة المفضلة</Text>
+                                    <Text style={{ fontSize: 10, fontWeight: '200' , fontFamily: "helvetica-regular" , textAlign:"right"   }}> اللغة المفضلة</Text>
                                 </View>
 
                                 <View style={styles.pickerView}>
@@ -317,13 +322,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2', 
         elevation: 0,
         height: 50,
-        marginTop: 23
+        marginTop: 0
     },
     titleStyle: { 
         color: '#323232', 
         fontSize: 16, 
         alignSelf: 'center',
-        fontWeight: '400'
+        fontWeight: '400',fontFamily: "helvetica-regular" , textAlign:"right"
     },
     mainView: {
         width: '85%',
@@ -351,11 +356,12 @@ const styles = StyleSheet.create({
     textStyle: { 
         fontWeight: '400',
         fontSize: 14,
-        marginBottom: 15
+        marginBottom: 15 ,fontFamily: "helvetica-regular" , textAlign:"right"
     },
     textStyle2: {
         fontSize: 10,
-        color: '#a0a8b5'
+        color: '#a0a8b5' ,
+         fontFamily: "helvetica-regular" , textAlign:"right"
     },
     inputItemStyle: {
         marginTop: 4,
@@ -364,7 +370,7 @@ const styles = StyleSheet.create({
         paddingRight: 8
     },
     inputTextStyle: { 
-        fontSize: 10 
+        fontSize: 10 ,fontFamily: "helvetica-regular" , textAlign:"right"
     },
     pickerView: { 
         backgroundColor: '#ffffff', 
@@ -374,11 +380,12 @@ const styles = StyleSheet.create({
     pickerStyle: { 
         width: '100%',
         height: 25,
-        fontSize: 50
+        fontSize: 50, borderBottomWidth: 2,
+        borderBottomColor:'#000',
     },
     btnStyle: {
         width: 85,
-        height: 21,
+        height: 30,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#4d4d4d',
@@ -387,7 +394,7 @@ const styles = StyleSheet.create({
     },
     btnStyle3: {
         width: 65,
-        height: 15,
+        height: 30,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#4d4d4d',
@@ -396,7 +403,7 @@ const styles = StyleSheet.create({
     },
     btnTextStyle: {
         color: '#fff',
-        fontSize: 9,
+        fontSize: 9,fontFamily: "helvetica-regular" 
     },
     btnStyle2: {
         width: 120,
@@ -413,7 +420,8 @@ const styles = StyleSheet.create({
     btnTextStyle2: {
         color: '#fff',
         fontSize: 12,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: "helvetica-regular" 
     },
     imageView: {
         backgroundColor: '#f2f2f2',

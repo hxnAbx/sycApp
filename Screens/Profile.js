@@ -142,14 +142,27 @@ export default class Profile extends Component {
                         <View style={[styles.view1, { marginRight: 20 }]}>
                             <Text style={styles.textStyle1}>Expiry Date:</Text>
                             <Text style={styles.textStyle2}>{this.state.jsonResult.expiry_date}</Text>
+                            
                         </View>
 
                         <View style={styles.view1}>
                             <Text style={styles.textStyle1}>Category:</Text>
                             <Text style={styles.textStyle2}>{this.state.jsonResult.membership}</Text>
+                            
                         </View>
                     </View>
-
+                    <View style={styles.row}> 
+                        <View style={styles.leftSide}>
+                        <Button style={styles.buttonConatiner} onPress={()=> Actions.attendence() }>
+                            <Text style={styles.button}>Member Attendance </Text>
+                            </Button>
+                        </View>
+                        <View style={styles.rightSide}>
+                        <Button style={styles.buttonConatiner} onPress={()=> Actions.uploadCertification() }>
+                            <Text style={styles.button}>Certificates </Text>
+                            </Button>
+                        </View>
+                    </View>
                     <View style={styles.view2}>
                         <Text>Forgot your card?</Text>
                         <Text>You can scan code here</Text>
@@ -171,6 +184,26 @@ const styles = StyleSheet.create({
         elevation: 0,
         height: 50,
         marginTop: 23
+    },
+    leftSide:{
+        marginLeft:"15%",
+        width:"30%",
+        marginTop:30
+    },
+    rightSide:{
+        marginLeft:"10%",
+        width:"30%",
+        marginTop:30
+    },
+    buttonConatiner:{
+        height:30,
+        backgroundColor:"#2b2d2e",
+        marginTop:4
+    },button:{
+        color:"#fff",
+        fontSize:9,
+        textAlign:"center",
+        flex:1
     },
     titleStyle: { 
         color: '#323232', 
@@ -221,6 +254,11 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         marginTop: 25,
         flexDirection: 'row'
+    },
+    row: {
+        flexDirection:"row",
+        width:"90%",
+        marginLeft:"5%"
     },
     view1: {
         borderLeftWidth: 1,

@@ -347,7 +347,8 @@ const styles = StyleSheet.create({
     btnTextStyle2: {
         color: '#fff',
         fontSize: 12,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: "helvetica-regular",
     },
     arrowsView: {
         flexDirection: 'row',

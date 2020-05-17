@@ -177,7 +177,7 @@ openDrawer() {
                         </SafeAreaView> 
 
                         {this.state.swipeText ?
-                            <Text style={styles.title}>Swipe to Left</Text>                                          
+                            <Text style={styles.title}>Swipe to Left    </Text>                                          
                             :
                             null
                         }
@@ -244,7 +244,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2',
         paddingRight: 5,
         paddingLeft: 5,
-        borderRadius: 3
+        borderRadius: 3,
+        fontFamily: "helvetica-regular",
     },
     imageView: { 
         width: 250,
@@ -258,16 +259,19 @@ const styles = StyleSheet.create({
     },
     textView: {
         marginTop: 30,
-        marginLeft: 44
+        marginLeft: 44,
+        fontFamily: "helvetica-regular",
     },
     textStyle: { 
         fontWeight: 'bold',
-        fontSize: 13
+        fontSize: 13,
+        fontFamily: "helvetica-regular",
     },
     textStyle2: {
         fontSize: 12,
         textAlign: 'justify',
-        color: '#787878'
+        color: '#787878',
+        fontFamily: "helvetica-regular",
     },
     innerView: {
         flexDirection: 'row',
@@ -303,6 +307,7 @@ const styles = StyleSheet.create({
     },
     footerText: { 
         color: '#f2f2f2',
-        fontSize: 17
+        fontSize: 17,
+        fontFamily: "helvetica-regular",
     }
 })

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView } from 'react-native'
-import { Container, Content, Header, Button, Left, Body, Drawer } from 'native-base'
+import { Container, Content, Header, Button, Left, Body, Drawer, Right } from 'native-base'
 import Feather from 'react-native-vector-icons/Feather'
 import Octicons from 'react-native-vector-icons/Octicons'
 import Ionicons from 'react-native-vector-icons/Ionicons'
@@ -134,15 +134,19 @@ openDrawer() {
                 content={<SideBar navigator={this.navigator} close={() => this.closeDrawer()} />}
                 onClose={() => this.closeDrawer()}
                 openDrawerOffset={0.4}
+                side="right"
             > 
                 <Container style={styles.container}>
                     <Header transparent>
                         <Left style={{ flex: 0.2 }}>
-                            <Button transparent onPress={() => this.openDrawer()}>
-                                <Feather type='Feather' name='menu' size={20} color='#323232' />
-                            </Button>
+                           
                         </Left>
                         <Body />
+                        <Right>
+                        <Button transparent onPress={() => this.openDrawer()}>
+                                <Feather type='Feather' name='menu' size={20} color='#323232' />
+                            </Button>
+                        </Right>
                     </Header>
 
                     <HomeButtons Title="photoGallery" />
@@ -177,18 +181,18 @@ openDrawer() {
                         </SafeAreaView> 
 
                         {this.state.swipeText ?
-                            <Text style={styles.title}>Swipe to Left</Text>                                          
+                            <Text style={styles.title}> اسحب إلى اليسار</Text>                                          
                             :
                             null
                         }
 
                         <View style={styles.textView}>
-                        <Text style={styles.textStyle, {textAlign:'left'}}>{this.state.entries[s].name.replace(regix , "")}</Text>
+                        <Text style={styles.textStyle}>{this.state.entries[s].name.replace(regix , "")}</Text>
                             <Text style={styles.textStyle}>Lorem ipsum text</Text>
 
                             <View style={styles.innerView}>
                                 <Octicons type='Octicons' name='calendar' size={16} color='#787878' />
-                                <Text style={[styles.textStyle2, { marginLeft: 6 }]}>Sunday - 2019.5.5</Text>
+                                <Text style={[styles.textStyle2, { marginRight: 6 }]}>Sunday - 2019.5.5</Text>
                             </View>
                         </View>
 
@@ -244,7 +248,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2',
         paddingRight: 5,
         paddingLeft: 5,
-        borderRadius: 3
+        borderRadius: 3,
+        fontFamily: "helvetica-regular",
     },
     imageView: { 
         width: 250,
@@ -258,21 +263,28 @@ const styles = StyleSheet.create({
     },
     textView: {
         marginTop: 30,
-        marginLeft: 44
+        marginLeft: 44,
+        fontFamily: "helvetica-regular",
     },
     textStyle: { 
         fontWeight: 'bold',
-        fontSize: 13
+        fontSize: 13,
+        textAlign:"right",
+        marginRight:10,
+        fontFamily: "helvetica-regular",
     },
     textStyle2: {
         fontSize: 12,
-        textAlign: 'justify',
-        color: '#787878'
+        textAlign: 'right',
+        color: '#787878',
+        fontFamily: "helvetica-regular",
     },
     innerView: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginTop: 5
+        flexDirection: 'row-reverse',
+        alignItems: 'flex-end',
+        marginTop: 5,
+        textAlign:"right",
+        marginLeft:10
     },
     lineStyle: {
         borderWidth: 0.5,
@@ -303,6 +315,7 @@ const styles = StyleSheet.create({
     },
     footerText: { 
         color: '#f2f2f2',
-        fontSize: 17
+        fontSize: 17,
+        fontFamily: "helvetica-regular",
     }
 })

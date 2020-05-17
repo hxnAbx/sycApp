@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView,ScrollView, TextInput,Picker, } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView,ScrollView, TextInput,Picker, Linking} from 'react-native'
 import { Container, Content,Button, Header, Left, Body, Right, Title, Input, Item , Drawer} from 'native-base'
 import Feather from 'react-native-vector-icons/Feather'
 import MapView from 'react-native-maps';
@@ -74,10 +74,10 @@ export default class Contact extends Component {
                 <View style={styles.formItemWrapper}>
                     <Text style={styles.formLabel}>اختر:</Text>
                     <View style={styles.PickerContainer}>
-                        <Picker>
-                            <Picker.Item label="استفسار" value="city1" />
-                            <Picker.Item label="مقترح" value="city2" />
-                            <Picker.Item label="ملحوظة" value="city2" />
+                        <Picker style={styles.PickerStyle}>
+                            <Picker.Item label="استفسار" value="city1" style={styles.PickerStyle} />
+                            <Picker.Item label="مقترح" value="city2" style={styles.PickerStyle} />
+                            <Picker.Item label="ملحوظة" value="city2"  style={styles.PickerStyle}/>
                         </Picker>
                     </View>
                     
@@ -88,14 +88,12 @@ export default class Contact extends Component {
                         
                     </TextInput>
                 </View>
-                <View style={styles.formItemWrapper}>
-                <Button  style={styles.buttonContaier}>
-                <Text style={styles.button}>إرسال </Text>
-                </Button>
-                </View>
-                
-            </View>
-            <View>
+
+
+
+                <View style={styles.row}>
+                <View style={styles.leftSide}>
+                <View>
               <Text style={styles.h1}>كن أقرب إلينا وتواصل معنا عبر:</Text>
               
             </View>
@@ -104,34 +102,43 @@ export default class Contact extends Component {
             </View>
             <View style={styles.socialWrapper}>
                         <View style={styles.social}>
+                        <TouchableOpacity   onPress={() => Linking.openURL('http://www.instagram.com/shjyouth')}>   
                         <Image
                             style={styles.icon}
                             source={require('../../assets/insta.png')}
                         />
+                         </TouchableOpacity>
+                         <TouchableOpacity   onPress={() => Linking.openURL('https://ar-ar.facebook.com/shjyouth/')}>   
                         <Image
                             style={styles.icon}
                             source={require('../../assets/fb.png')}
                         />
+                        </TouchableOpacity>
+                         <TouchableOpacity   onPress={() => Linking.openURL('http://twitter.com/shjyouth')}>   
                         <Image
                             style={styles.icon}
                             source={require('../../assets/twitter.png')}
                         />
+                        </TouchableOpacity>
+                         <TouchableOpacity   onPress={() => Linking.openURL('https://www.linkedin.com/company/sharjah-youth/')}>   
                         <Image
                             style={styles.icon}
                             source={require('../../assets/linkedin.png')}
                         />
+                        </TouchableOpacity>
+                         <TouchableOpacity   onPress={() => Linking.openURL('https://www.youtube.com/user/youthshj/videos')}>   
                         <Image
                             style={styles.icon}
                             source={require('../../assets/youtube.png')}
                         />
-                        
+                        </TouchableOpacity>
                     </View>
                 </View>
                 <View >
                     <Text  style={styles.h2}>الأرقام التالية:</Text>
                 </View>
                 <View>
-                    <Text  style={styles.p}>971561886685+ 97165933000+
+                    <Text  style={styles.p}>+971561886685 +97165933000
                     </Text>
                 </View>
                 <View>
@@ -141,20 +148,41 @@ export default class Contact extends Component {
                     <Text  style={styles.p}> info@sy.shj.ae</Text>
                 </View>
 
+                </View>
+                <View>
+                    </View>
+                    
+                    <View style={styles.righSide}>  
+                        <View style={styles.formItemWrapper}>
+                        <Button  style={styles.buttonContaier}>
+                        <Text style={styles.button}>إرسال </Text>
+                        </Button>
+                        <Button  style={styles.buttonContaier} onPress={() => Actions.trackFeedBackAr() }>
+                        <Text style={styles.button}>تعقب الملاحظة</Text>
+                        </Button>
+                        <Button  style={styles.buttonContaier} onPress={() => Actions.feedBackHistoryAr() }>
+                        <Text style={styles.button}>فئات الأحداث </Text>
+                        </Button>
+                        </View>
+                    </View>
+                    </View>
+                </View>
+            
+                
                 <View>
                
                 <MapView       
                  style={styles.map}        
                  region={{          
-                     latitude: 25.316245,          
-                     longitude: 55.523094,          
+                     latitude: 25.3159198,          
+                     longitude: 55.5228779,          
                      latitudeDelta: 0.00100,         
                     longitudeDelta: 0.0100        
                       }}        
                       showsUserLocation={true}   
                   > 
                   <MapView.Marker 
-                    coordinate = {{ "latitude" : 25.316245, "longitude":  55.523094 }}
+                    coordinate = {{ "latitude" :  25.3159198, "longitude":  55.5228779 }}
                     title={"Sharjah Youth Centre "}
 
                   />
@@ -177,10 +205,16 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2', 
         elevation: 0,
         height: 50,
-        marginTop: 23
+        marginTop: 0
     },
     container: {
       backgroundColor: 'white'
+    },
+    righSide:{
+        width:"40%"
+    },
+    leftSide:{
+        width:"60%"
     },
     headerBack:{
         backgroundColor : '#c2c2c2'
@@ -199,7 +233,8 @@ const styles = StyleSheet.create({
     },  titleStyle: { 
         color: '#323232', 
         fontSize: 16, 
-        alignSelf: 'center' 
+        alignSelf: 'center',
+        fontFamily: "helvetica-regular"
     },
     menuWrapper: {
         position: "absolute",
@@ -261,16 +296,18 @@ const styles = StyleSheet.create({
         height:150
     },
     h1: {
-        fontSize: 18,
-        fontWeight: "bold",
+        fontSize: 15,
         margin: 5,
         fontFamily: "helvetica-bold",
+        textAlign:"right",
+        color:"#636262"
     },
     h2: {
         fontSize: 13,
-        fontWeight: "bold",
         margin: 5,
         fontFamily: "helvetica-bold",
+        textAlign:"right",
+        color:"#636262"
     },
     manualSpace :{
         textAlign: "right",
@@ -300,10 +337,11 @@ const styles = StyleSheet.create({
     buttonContaier:{
         textAlign:"center",
         alignItems:"center",
-        alignContent:"center"
-    },
-    button: {
-        marginTop: 5
+        alignContent:"center",
+        backgroundColor:"#000",
+        width:150,
+        marginTop:10,
+        textAlign:"center"
     },
     footerWrapper: {
         marginBottom: 50,
@@ -314,6 +352,9 @@ const styles = StyleSheet.create({
         position:"absolute",
         right: 20,
         top: 130
+    },
+    PickerStyle:{
+        fontFamily: "helvetica-regular",
     },
     formWrapper: {
         marginTop: 30,
@@ -352,20 +393,16 @@ const styles = StyleSheet.create({
       textAlign:"right"
     },
     button: {
-        alignContent:"center",
-        alignSelf:"center",
-        marginLeft:'45%',
-        marginRight:'45%',
-        flex:1,
         color:"white",
+        textAlign:"center",
        fontFamily: "helvetica-regular",
+       width:"100%"
     },
     p: {
        fontFamily: "helvetica-light",
         lineHeight: 14,
         margin: 5,
         paddingTop : 3,
-        fontWeight: "bold",
         textAlign:'right'
     },
     map :{

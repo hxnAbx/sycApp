@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { View, Text, StyleSheet, Image, TouchableOpacity , AsyncStorage} from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity , AsyncStorage , Linking} from 'react-native'
 import { Container, Content, Button, Footer, FooterTab ,Drawer, Left } from 'native-base'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Octicons from 'react-native-vector-icons/Octicons'
@@ -31,12 +31,12 @@ export default class SideBar extends Component {
         }
     }
    
-    async componentDidMount(){
+     async componentDidMount(){
   
-        this.setState({baseUrl : GLOBAL.baseURL});
+         this.setState({baseUrl : GLOBAL.baseURL});
         await this._loadInitialState();
 
-    }
+     }
     
 
      _loadInitialState = async() => {
@@ -77,16 +77,8 @@ export default class SideBar extends Component {
                          <Feather type='Feather' name='x' size={35} color='#323232' onPress={ () => this.closeDrawer()  } />  
                     </View>
 
-                    <View style={[styles.view1, { marginTop: 20 }]}>
-                        {this.state.isUserloaded && (
-                        <Image
-                        source={{uri : this.state.profileImg}}
-                        style={[styles.imageStyle, {borderRadius: 60}]} 
-                        />
-                        )}
-                        {!this.state.isUserloaded && (
-                        <Image source={require('../../Images/dp1.png')} style={styles.imageStyle} />
-                        )}
+                    <View style={[styles.view1, { marginTop: 20,marginLeft:30}]}>
+                       
                         <View style={{ alignItems: 'center' }}>
                             <Text>{this.state.isUserloaded && (
                             this.state.userName
@@ -103,6 +95,15 @@ export default class SideBar extends Component {
                                 </Button>
                                 )}
                         </View>
+                        {this.state.isUserloaded && (
+                        <Image
+                        source={{uri : this.state.profileImg}}
+                        style={[styles.imageStyle, {borderRadius: 60}]} 
+                        />
+                        )}
+                        {!this.state.isUserloaded && (
+                        <Image source={require('../../Images/dp1.png')} style={styles.imageStyle} />
+                        )}
                     </View>
 
                     <View style={styles.lineStyle}></View>
@@ -117,7 +118,7 @@ export default class SideBar extends Component {
                     <View style={styles.view2}>
                         <Octicons type='Octicons' name='info' size={20} color='#323232' /> 
                         <TouchableOpacity onPress={() => this.setState({ aboutView: !this.state.aboutView })}>
-                            <Text style={styles.textStyle}>من نحن</Text>                
+                            <Text style={styles.textStyle}>من نحن <MaterialCommunityIcons type='MaterialCommunityIcons' name='chevron-down' size={20} color='#323232' style={{marginTop:5}} /></Text>                
                         </TouchableOpacity>
                     </View>
 
@@ -137,7 +138,7 @@ export default class SideBar extends Component {
                     <View style={styles.view2}>
                         <MaterialCommunityIcons type='MaterialCommunityIcons' name='file-document-box-outline' size={20} color='#323232' /> 
                         <TouchableOpacity onPress={() => this.setState({ memberView: !this.state.memberView })}>
-                            <Text style={styles.textStyle}>العضویة</Text>    
+                            <Text style={styles.textStyle}>العضویة <MaterialCommunityIcons type='MaterialCommunityIcons' name='chevron-down' size={20} color='#323232' style={{marginTop:5}} /></Text>    
                         </TouchableOpacity>                
                     </View>
 
@@ -155,9 +156,9 @@ export default class SideBar extends Component {
                     }
 
                     <View style={styles.view2}>
-                        <EvilIcons type='EvilIcons' name='calendar' size={20} color='#323232' /> 
+                        <MaterialCommunityIcons type='MaterialCommunityIcons' name='calendar-outline' size={20} color='#323232' /> 
                         <TouchableOpacity onPress={() => this.setState({ eventView: !this.state.eventView })}>
-                            <Text style={styles.textStyle}>البرامج والفعالیات</Text>                
+                            <Text style={styles.textStyle}>البرامج والفعالیات <MaterialCommunityIcons type='MaterialCommunityIcons' name='chevron-down' size={20} color='#323232' style={{marginTop:5}} /></Text>                
                         </TouchableOpacity>
                     </View>
 
@@ -166,7 +167,7 @@ export default class SideBar extends Component {
                             <TouchableOpacity>
                                 <Text style={styles.textStyle2}>- الأنشطةالیومیة </Text>                
                             </TouchableOpacity>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={()=> Actions.eventCategoryAr() }>
                                 <Text style={styles.textStyle2}>- البرامج </Text>                
                             </TouchableOpacity>
                             <TouchableOpacity onPress={() => {Actions.summerAr(); this.setState({ eventView: false })}}>
@@ -180,7 +181,7 @@ export default class SideBar extends Component {
                     <View style={styles.view2}>
                         <MaterialIcons type='MaterialIcons' name='perm-media' size={20} color='#323232' /> 
                         <TouchableOpacity onPress={() => this.setState({ mediaView: !this.state.mediaView })}>
-                            <Text style={styles.textStyle}>المركزالإعلامي</Text>                
+                            <Text style={styles.textStyle}>المركز الاعلامي <MaterialCommunityIcons type='MaterialCommunityIcons' name='chevron-down' size={20} color='#323232' style={{marginTop:5}} /></Text>                
                         </TouchableOpacity>
                     </View>
 
@@ -203,10 +204,19 @@ export default class SideBar extends Component {
                     <View style={styles.view2}>
                         <FontAwesome type='FontAwesome' name='envelope-open-o' size={20} color='#323232' /> 
                         <TouchableOpacity onPress={() => {Actions.contactUsAr(); this.setState({ mediaView: false })}}>
-                            <Text style={styles.textStyle}>تواصل معنا</Text>                
+                            <Text style={styles.textStyle}>تواصل معنا <MaterialCommunityIcons type='MaterialCommunityIcons' name='chevron-down' size={20} color='#323232' style={{marginTop:5}} />
+                            </Text>                
                         </TouchableOpacity>
                     </View>
-                    
+
+                   
+                    {/* <View style={styles.view2}>
+                        <FontAwesome type='FontAwesome' name='envelope-open-o' size={20} color='#323232' /> 
+                        <TouchableOpacity onPress={() => {Actions.feedbackAr(); this.setState({ mediaView: false })}}>
+                            <Text style={styles.textStyle}>ملاحظة جديدة</Text>                
+                        </TouchableOpacity>
+                    </View> */}
+
                     {this.state.isUserloaded && (
                         <View style={styles.view2}>
                         <FontAwesome type='FontAwesome' name='envelope-open-o' size={20} color='#323232' /> 
@@ -216,30 +226,34 @@ export default class SideBar extends Component {
                     </View>
 
                     )}
-
+                     <View style={styles.languageButtonsWrapper}>
+                    <Text style={styles.languageButtons} onPress={() => Actions.home()}>EN</Text>
+                    <Text style={styles.languageButtons} onPress={()=> Actions.homeAr()}>ع‎</Text>
+                    </View>
                 </Content>
 
                 <Footer style={styles.footerStyle}>
                 <View style={styles.lineStyle}></View>
 
                     <View style={{ alignSelf: 'center', marginBottom: 10 }}>
-                        <Text style={styles.textStyle}>تابعنا</Text>
+                        <Text style={styles.textStyle}>تابعنا
+                        </Text>
                     </View>
 
                     <View style={styles.view3}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => Linking.openURL('http://www.instagram.com/shjyouth')}>
                             <Entypo type='Entypo' name='instagram' size={15} color='#323232' />    
-                        </TouchableOpacity> 
-                        <TouchableOpacity>
+                        </TouchableOpacity > 
+                        <TouchableOpacity  onPress={() => Linking.openURL('https://ar-ar.facebook.com/shjyouth/')}>
                             <EvilIcons type='EvilIcons' name='sc-facebook' size={20} color='#323232' />    
                         </TouchableOpacity> 
-                        <TouchableOpacity>
+                        <TouchableOpacity  onPress={() => Linking.openURL('http://twitter.com/shjyouth')}>
                             <AntDesign type='AntDesign' name='twitter' size={15} color='#323232' />    
                         </TouchableOpacity> 
-                        <TouchableOpacity>
+                        <TouchableOpacity  onPress={() => Linking.openURL('https://www.linkedin.com/company/sharjah-youth/')}>
                             <Entypo type='Entypo' name='linkedin' size={15} color='#323232' />    
                         </TouchableOpacity> 
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => Linking.openURL('https://www.youtube.com/user/youthshj/videos')}>
                             <FontAwesome type='FontAwesome' name='youtube' size={15} color='#323232' />    
                         </TouchableOpacity> 
                     </View>
@@ -265,7 +279,23 @@ const styles = StyleSheet.create({
         marginTop: 40,
         justifyContent: 'space-between'
     },
-    
+    languageButtonsWrapper: {
+        width: 100,
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginLeft: '26%',zIndex:2,
+        marginTop:10,
+        marginBottom:10
+      },languageButtons: {
+        width: 30,
+        padding: 5,
+        backgroundColor: '#B3B3B3',
+        color: 'white',
+        textAlign: 'center',
+        fontFamily: "helvetica-ar"
+      },
     imageStyle: { 
         width: 90, 
         height: 90,
@@ -284,6 +314,7 @@ const styles = StyleSheet.create({
         fontSize: 10,
         marginLeft:5,
         marginRight:5,
+        fontFamily: "helvetica-regular"
     },
     lineStyle: {
         borderWidth: 1,
@@ -306,12 +337,16 @@ const styles = StyleSheet.create({
         textAlign:'right',
         paddingRight:10,
         fontSize: 14.5,
+        fontFamily: "helvetica-regular"
+        
     },
     textStyle2: {
         color: '#353535',
         marginTop: 5,
         fontSize: 14.5,
-        paddingRight:10
+        textAlign:'right',
+        paddingRight:10,
+        fontFamily: "helvetica-regular"
 
     },
     view3: {

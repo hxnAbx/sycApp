@@ -84,6 +84,7 @@ export default class Registration extends Component {
             content={<SideBar navigator={this.navigator} close={() => this.closeDrawer()} />}
             onClose={() => this.closeDrawer()}
             openDrawerOffset={0.4}
+            side="right"
         > 
         
             <Container>
@@ -106,6 +107,7 @@ export default class Registration extends Component {
                 <HomeButtons Title="Registration" />
 
                 <Content>
+                    
                     <View style={styles.mainView}>
                         <Text style={styles.textStyle}>قم بتعبئة البيانات التالية للتسجيل في البرنامج.</Text>
 
@@ -113,7 +115,7 @@ export default class Registration extends Component {
                             <View style={{ marginBottom: 8 }}>
                                 <View style={{ flexDirection: 'row-reverse' }}>
                                     <Text style={styles.textStyle}>*</Text>
-                                    <Text style={{ fontSize: 10 }}>*اسم الناشئ باللغة العربية</Text>
+                                    <Text style={{ fontSize: 10 , fontFamily: "helvetica-regular", textAlign:"right" }}>*اسم الناشئ باللغة العربية</Text>
                                 </View>
 
                                 <Item regular style={styles.inputItemStyle}>
@@ -128,9 +130,9 @@ export default class Registration extends Component {
 
                             <View style={styles.innerView2}>
                                 <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'row-reverse'  }}>
                                         <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>رقم الهوية</Text>
+                                        <Text style={{ fontSize: 10 , fontFamily: "helvetica-regular", textAlign:"right" }}>رقم الهوية</Text>
                                     </View>
 
                                     <Item regular style={styles.inputItemStyle}>
@@ -139,33 +141,9 @@ export default class Registration extends Component {
                                 </View>
 
                                 <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'row-reverse'  }}>
                                         <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>تاريخ انتهاء الهوية</Text>
-                                    </View>
-
-                                    <Item regular style={styles.inputItemStyle}>
-                                        <Input style={styles.inputTextStyle} placeholder='' />
-                                    </Item>
-                                </View>
-                            </View>
-
-                            <View style={styles.innerView2}>
-                                <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>رقم الجواز</Text>
-                                    </View>
-
-                                    <Item regular style={styles.inputItemStyle}>
-                                        <Input style={styles.inputTextStyle} placeholder='' />
-                                    </Item>
-                                </View>
-
-                                <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>تاريخ انتهاء الجواز</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>تاريخ انتهاء الهوية</Text>
                                     </View>
 
                                     <Item regular style={styles.inputItemStyle}>
@@ -176,9 +154,9 @@ export default class Registration extends Component {
 
                             <View style={styles.innerView2}>
                                 <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'row-reverse'  }}>
                                         <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>الجنسية</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>رقم الجواز</Text>
                                     </View>
 
                                     <Item regular style={styles.inputItemStyle}>
@@ -187,33 +165,9 @@ export default class Registration extends Component {
                                 </View>
 
                                 <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'row-reverse'  }}>
                                         <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>تاريخ الميلاد</Text>
-                                    </View>
-
-                                    <Item regular style={styles.inputItemStyle}>
-                                        <Input style={styles.inputTextStyle} placeholder='' />
-                                    </Item>
-                                </View>
-                            </View>
-
-                            <View style={styles.innerView2}>
-                                <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>الإمارة</Text>
-                                    </View>
-
-                                    <Item regular style={styles.inputItemStyle}>
-                                        <Input style={styles.inputTextStyle} placeholder='' />
-                                    </Item>
-                                </View>
-
-                                <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>المنطقة</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>تاريخ انتهاء الجواز</Text>
                                     </View>
 
                                     <Item regular style={styles.inputItemStyle}>
@@ -224,9 +178,9 @@ export default class Registration extends Component {
 
                             <View style={styles.innerView2}>
                                 <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'row-reverse' }}>
                                         <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>الصف</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right"  }}>الجنسية</Text>
                                     </View>
 
                                     <Item regular style={styles.inputItemStyle}>
@@ -235,33 +189,9 @@ export default class Registration extends Component {
                                 </View>
 
                                 <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'row-reverse'  }}>
                                         <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>المدرسة</Text>
-                                    </View>
-
-                                    <Item regular style={styles.inputItemStyle}>
-                                        <Input style={styles.inputTextStyle} placeholder='' />
-                                    </Item>
-                                </View>
-                            </View>
-
-                            <View style={styles.innerView2}>
-                                <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>صندوق البريد</Text>
-                                    </View>
-
-                                    <Item regular style={styles.inputItemStyle}>
-                                        <Input style={styles.inputTextStyle} placeholder='' />
-                                    </Item>
-                                </View>
-
-                                <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>العنوان</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>تاريخ الميلاد</Text>
                                     </View>
 
                                     <Item regular style={styles.inputItemStyle}>
@@ -272,9 +202,81 @@ export default class Registration extends Component {
 
                             <View style={styles.innerView2}>
                                 <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'row-reverse' }}>
                                         <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>البريد الإلكتروني للناشئ</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>الإمارة</Text>
+                                    </View>
+
+                                    <Item regular style={styles.inputItemStyle}>
+                                        <Input style={styles.inputTextStyle} placeholder='' />
+                                    </Item>
+                                </View>
+
+                                <View style={{ width: '47.5%' }}>
+                                    <View style={{ flexDirection: 'row-reverse'  }}>
+                                        <Text style={styles.textStyle}>*</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>المنطقة</Text>
+                                    </View>
+
+                                    <Item regular style={styles.inputItemStyle}>
+                                        <Input style={styles.inputTextStyle} placeholder='' />
+                                    </Item>
+                                </View>
+                            </View>
+
+                            <View style={styles.innerView2}>
+                                <View style={{ width: '47.5%' }}>
+                                    <View style={{ flexDirection: 'row-reverse'  }}>
+                                        <Text style={styles.textStyle}>*</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>الصف</Text>
+                                    </View>
+
+                                    <Item regular style={styles.inputItemStyle}>
+                                        <Input style={styles.inputTextStyle} placeholder='' />
+                                    </Item>
+                                </View>
+
+                                <View style={{ width: '47.5%' }}>
+                                    <View style={{ flexDirection: 'row-reverse'  }}>
+                                        <Text style={styles.textStyle}>*</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>المدرسة</Text>
+                                    </View>
+
+                                    <Item regular style={styles.inputItemStyle}>
+                                        <Input style={styles.inputTextStyle} placeholder='' />
+                                    </Item>
+                                </View>
+                            </View>
+
+                            <View style={styles.innerView2}>
+                                <View style={{ width: '47.5%' }}>
+                                    <View style={{flexDirection: 'row-reverse'  }}>
+                                        <Text style={styles.textStyle}>*</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>صندوق البريد</Text>
+                                    </View>
+
+                                    <Item regular style={styles.inputItemStyle}>
+                                        <Input style={styles.inputTextStyle} placeholder='' />
+                                    </Item>
+                                </View>
+
+                                <View style={{ width: '47.5%' }}>
+                                    <View style={{flexDirection: 'row-reverse'  }}>
+                                        <Text style={styles.textStyle}>*</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>العنوان</Text>
+                                    </View>
+
+                                    <Item regular style={styles.inputItemStyle}>
+                                        <Input style={styles.inputTextStyle} placeholder='' />
+                                    </Item>
+                                </View>
+                            </View>
+
+                            <View style={styles.innerView2}>
+                                <View style={{ width: '47.5%' }}>
+                                    <View style={{flexDirection: 'row-reverse'  }}>
+                                        <Text style={styles.textStyle}>*</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>البريد الإلكتروني للناشئ</Text>
                                     </View>
 
                                     <Item regular style={styles.inputItemStyle}>
@@ -285,9 +287,9 @@ export default class Registration extends Component {
                                 </View>
 
                                 <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'row-reverse'  }}>
                                         <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>رقم هاتف الناشئ</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>رقم هاتف الناشئ</Text>
                                     </View>
 
                                     <Item regular style={styles.inputItemStyle}>
@@ -302,9 +304,9 @@ export default class Registration extends Component {
 
                             <View style={styles.innerView2}>
                                 <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'row-reverse'  }}>
                                         <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>البريد الإلكتروني لولي الأمر</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>البريد الإلكتروني لولي الأمر</Text>
                                     </View>
 
                                     <Item regular style={styles.inputItemStyle}>
@@ -315,9 +317,9 @@ export default class Registration extends Component {
                                 </View>
 
                                 <View style={{ width: '47.5%' }}>
-                                    <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ flexDirection: 'row-reverse' }}>
                                         <Text style={styles.textStyle}>*</Text>
-                                        <Text style={{ fontSize: 10 }}>رقم هاتف ولي الأمر</Text>
+                                        <Text style={{ fontSize: 10, fontFamily: "helvetica-regular", textAlign:"right" }}>رقم هاتف ولي الأمر</Text>
                                     </View>
 
                                     <Item regular style={styles.inputItemStyle}>
@@ -343,12 +345,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2', 
         elevation: 0,
         height: 50,
-        marginTop: 23
+        marginTop: 0
     },
     titleStyle: { 
         color: '#323232', 
         fontSize: 16, 
-        alignSelf: 'center' 
+        alignSelf: 'center' ,
+        fontFamily: "helvetica-regular",
+        textAlign:"right"
     },
     mainView: {
         width: '85%',
@@ -357,7 +361,9 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         fontSize: 10,
-        color: 'red'
+        color: 'red',
+        fontFamily: "helvetica-regular",
+        textAlign:"right"
     },
     innerView: {
         marginTop: 15
@@ -374,11 +380,13 @@ const styles = StyleSheet.create({
     },
     inputTextStyle: { 
         textAlign: 'center', 
-        fontSize: 12 
+        fontSize: 12 ,
+        fontFamily: "helvetica-regular",
+        textAlign:"right"
     },
     btnStyle2: {
         width: 120,
-        height: 30,
+        height: 40,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#4d4d4d',
@@ -390,6 +398,8 @@ const styles = StyleSheet.create({
     btnTextStyle2: {
         color: '#fff',
         fontSize: 14,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: "helvetica-regular",
+        textAlign:"right"
     }
 })

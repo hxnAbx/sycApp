@@ -56,7 +56,7 @@ export default class Home extends Component {
 
                     <View style={styles.innerView2}>
                     <TouchableOpacity onPress={() => {Actions.signUp1Ar() } }> 
-                            <Text style={styles.textStyle1, styles.textStyle2}> اضغط هنا!]</Text>
+                            <Text style={styles.textStyle1}> اضغط هنا!]</Text>
                         </TouchableOpacity>
                         <Text style={styles.textStyle1}>[ اكتشف قدراتك ومهاراتك الخفيّة،  </Text>
                        
@@ -162,24 +162,26 @@ const styles = StyleSheet.create({
     },
     textStyle: { 
         alignSelf: 'center', 
-        fontWeight: 'bold', 
-        marginTop: 10 
+        marginTop: 10 ,
+        fontFamily: "helvetica-bold"
     },
     textStyle1: { 
         textAlign:'left',
         fontSize: 8, 
         color: '#3a3a3a' ,
-        fontFamily: 'helvetica-ar'
+        fontFamily: "helvetica-regular"
     },
     textStyle2: { 
         fontSize: 10, 
         textDecorationLine: 'underline', 
-        color: '#323232' 
+        color: '#323232' ,
+        fontFamily: "helvetica-regular"
     },
     textStyle3: { 
         alignSelf: 'center', 
         marginTop: 10,
-        color: '#323232'
+        color: '#323232',
+        fontFamily: "helvetica-regular"
     },
     arrowStyle1: {
         position: 'absolute',
@@ -210,11 +212,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     giftTextStyle: {
-        width: 85,
+
         fontSize: 9,
         color: '#28048c',
-        // marginLeft: 2,
-        textAlign: 'center',
+         marginLeft: 5,
+        textAlign: 'left',
+        fontFamily: "helvetica-regular"
         // backgroundColor: 'green'
     }
 })

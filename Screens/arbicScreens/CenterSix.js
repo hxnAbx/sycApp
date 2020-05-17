@@ -6,6 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import HomeButtons from './HomeButtons'
 import { Actions } from 'react-native-router-flux';
 import SideBar from "../arbicScreens/SideBar"
+import MapScreen from '../MapScreen'
 
 
 export default class CenterSix extends Component {
@@ -61,8 +62,8 @@ export default class CenterSix extends Component {
                 <Content style={{ marginTop: 20 }}>
                     <View style={styles.mainView}>
                     <View style={styles.locationView}>
-                            <Image resizeMode='stretch' source={require('../../Images/Location6.png')} style={styles.imageStyle2} />                                                       
-                        </View>      
+                                <MapScreen />
+                            </View>     
                         <View style={{ width: '49%' }}>
                             <Text style={styles.textStyle}>المنطقة الشرقية</Text>
                             <Text style={styles.textStyle}>مركز ناشئة كلباء</Text>
@@ -129,17 +130,22 @@ const styles = StyleSheet.create({
     textStyle: { 
         fontWeight: 'bold',
         fontSize: 13,
-        marginBottom: 15
+        marginBottom: 15,
+        textAlign:"right",
+        fontFamily: "helvetica-regular",
+        
     },
     textStyle2: {
         fontSize: 10,
         textAlign: 'right',
-        color: '#787878'
+        color: '#787878',
+        fontFamily: "helvetica-regular"
     },
     locationView: { 
         width: '49%', 
-        justifyContent: 'flex-end', 
-        alignItems: 'flex-end' 
+        height: 235,
+        alignSelf: 'flex-end',
+        marginBottom: 15
     },
     arrowsView: {
         flexDirection: 'row',

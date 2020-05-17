@@ -10,7 +10,6 @@ import Registration from './Screens/Registration';
 import RegistrationAr from './Screens/arbicScreens/Registration';
 import Summer from './Screens/Summer';
 import SummerAr from './Screens/arbicScreens/Summer';
-// import Scientific from './Screens/Scientific';
 import RegisterSuccess from './Screens/RegisterSuccess';
 import RegisterSuccessAr from './Screens/arbicScreens/RegisterSuccess';
 import Documents from './Screens/Documents';
@@ -64,6 +63,23 @@ import MapScreen from "./Screens/MapScreen"
 import RewardDetail from "./Screens/RewardDetail"
 import RewardDetailAr from "./Screens/arbicScreens/RewardDetail"
 import RewardPoint2 from "./Screens/RewardDetail2"
+import Certification from "./Screens/Certification"
+import UploadCertification from "./Screens/UploadCertification"
+import Feedback from "./Screens/Feedback"
+import TrackFeedBack from "./Screens/TrackFeedBack"
+import EventCategory from "./Screens/EventCategory"
+import FeedBackHistory from "./Screens/FeedBackHistory"
+import Attendence from "./Screens/Attendence"
+
+import CertificationAr from "./Screens/arbicScreens/Certification"
+import UploadCertificationAr from "./Screens/arbicScreens/UploadCertification"
+import FeedbackAr from "./Screens/arbicScreens/Feedback"
+import TrackFeedBackAr from "./Screens/arbicScreens/TrackFeedBack"
+import EventCategoryAr from "./Screens/arbicScreens/EventCategory"
+import FeedBackHistoryAr from "./Screens/arbicScreens/FeedBackHistory"
+import AttendenceAr from "./Screens/arbicScreens/Attendence"
+
+
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 
@@ -106,8 +122,22 @@ export default class App extends Component {
       return(        
         <Router>
               <Scene key="root">
-                <Scene hideNavBar key="splash" component={Splash}  />
-                <Scene hideNavBar key="home" component={Home}   />
+                <Scene hideNavBar key="splash" component={Splash}    />
+                <Scene hideNavBar key="attendence" component={Attendence}      />
+                <Scene hideNavBar key="attendenceAr" component={AttendenceAr}      />
+                <Scene hideNavBar key="trackFeedBack" component={TrackFeedBack}     />
+                <Scene hideNavBar key="trackFeedBackAr" component={TrackFeedBackAr}     />
+                <Scene hideNavBar key="feedBackHistory" component={FeedBackHistory}     />
+                <Scene hideNavBar key="feedBackHistoryAr" component={FeedBackHistoryAr}      />
+                <Scene hideNavBar key="eventCategory" component={EventCategory}     />
+                <Scene hideNavBar key="eventCategoryAr" component={EventCategoryAr}     />
+                <Scene hideNavBar key="feedback" component={Feedback}     />
+                <Scene hideNavBar key="feedbackAr" component={FeedbackAr}     />
+                <Scene hideNavBar key="certification" component={Certification}     />
+                <Scene hideNavBar key="certificationAr" component={CertificationAr}     />
+                <Scene hideNavBar key="uploadCertification" component={UploadCertification}      />
+                <Scene hideNavBar key="uploadCertificationAr" component={UploadCertificationAr}     />
+                <Scene hideNavBar key="home" component={Home}    />
                 <Scene hideNavBar key="homeAr" component={HomeAr}   />
                 <Scene hideNavBar key="profile" component={Profile}  />
                 <Scene hideNavBar key="profileAr" component={ProfileAr}  />
@@ -115,7 +145,7 @@ export default class App extends Component {
                 <Scene hideNavBar key="edit" component={Edit}  />
                 <Scene hideNavBar key="editAr" component={EditAr}  />
                 <Scene hideNavBar key="registration" component={Registration}  />
-                <Scene hideNavBar key="registrationAr" component={RegistrationAr}  />
+                <Scene hideNavBar key="registrationAr" component={RegistrationAr}   />
                 <Scene hideNavBar key="summer" component={Summer}  />
                 <Scene hideNavBar key="summerAr" component={SummerAr}   />
                 {/* <Scene hideNavBar key="scientific" component={Scientific}  /> */}
@@ -126,14 +156,14 @@ export default class App extends Component {
                 <Scene hideNavBar key="newsScreenAr" component={NewsScreenAr}  />
                 <Scene hideNavBar key="newsScreen2" component={NewsScreen2}  />
                 <Scene hideNavBar key="himmah" component={Himmah}  />
-                <Scene hideNavBar key="himmahAr" component={HimmahAr}  />
+                <Scene hideNavBar key="himmahAr" component={HimmahAr}   />
                 <Scene hideNavBar key="pointsCal" component={PointsCal}  />
                 <Scene hideNavBar key="pointsCalAr" component={PointsCalAr}  />
                 <Scene hideNavBar key="gifts" component={Gifts}  />
                 <Scene hideNavBar key="giftsAr" component={GiftsAr}  />
                 <Scene hideNavBar key="about" component={About}  />
                 <Scene hideNavBar key="aboutAr" component={AboutAr}  />
-                <Scene hideNavBar key="centerOne" component={CenterOne}  />
+                <Scene hideNavBar key="centerOne" component={CenterOne}   />
                 <Scene hideNavBar key="centerOneAr" component={CenterOneAr}  />
                 <Scene hideNavBar key="centerTwo" component={CenterTwo}  />
                 <Scene hideNavBar key="centerTwoAr" component={CenterTwoAr}  />
@@ -150,16 +180,16 @@ export default class App extends Component {
                 <Scene hideNavBar key="centerEight" component={CenterEight}  />
                 <Scene hideNavBar key="centerEightAr" component={CenterEightAr}  />
                 <Scene hideNavBar key="login" component={Login}  />
-                <Scene hideNavBar key="loginAr" component={LoginAr}  initial />
+                <Scene hideNavBar key="loginAr" component={LoginAr}   />
                 <Scene hideNavBar key="logout" component={Logout}  />
                 <Scene hideNavBar key="forgotPass" component={ForgotPass}  />
                 <Scene hideNavBar key="newPass" component={NewPass}  />
                 <Scene hideNavBar key="signUp1" component={SignUp1}  />
-                <Scene hideNavBar key="signUp1Ar" component={SignUp1Ar}  />
+                <Scene hideNavBar key="signUp1Ar" component={SignUp1Ar}     />
                 <Scene hideNavBar key="signUp2" component={SignUp2}  />
-                <Scene hideNavBar key="signUp2Ar" component={SignUp2Ar}  />
+                <Scene hideNavBar key="signUp2Ar" component={SignUp2Ar}     />
                 <Scene hideNavBar key="signUp3" component={SignUp3}  />
-                <Scene hideNavBar key="signUp3Ar" component={SignUp3Ar}  />
+                <Scene hideNavBar key="signUp3Ar" component={SignUp3Ar}   />
                 <Scene hideNavBar key="photoGallery" component={PhotoGallery}  />
                 <Scene hideNavBar key="photoGalleryAr" component={PhotoGalleryAr}  />
                 <Scene hideNavBar key="photoGallery2" component={PhotoGallery2}  />
@@ -170,7 +200,7 @@ export default class App extends Component {
                 <Scene hideNavBar key="rewardDetailAr" component={RewardDetailAr}  />
                 <Scene hideNavBar key="rewardPoint2" component={RewardPoint2}  />
                 <Scene hideNavBar key="contactUs" component={ContactUs}  />
-                <Scene hideNavBar key="contactUsAr" component={ContactUsAr}  />
+                <Scene hideNavBar key="contactUsAr" component={ContactUsAr}  initial/>
 
               </Scene>
          </Router>
@@ -189,9 +219,9 @@ export default class App extends Component {
   async _cacheResourcesAsync() {
     //const images = [require('./Images/appicon.jpg"')];
 
-    const cacheImages = images.map(image => {
-      return Asset.fromModule(image).downloadAsync();
-    }); 
-    return Promise.all(cacheImages);
+    // const cacheImages = images.map(image => {
+    //   return Asset.fromModule(image).downloadAsync();
+    // }); 
+    // return Promise.all(cacheImages);
   }
 }

@@ -89,6 +89,7 @@ export default class NewsScreen extends Component {
         return (
             <View>
                 <Image 
+                resizeMode="stretch"
                 source={{uri : "http://ycs.ae/himmah/app/webroot/img/user_upload/"+item.photo}}
                  style={styles.imageStyle} />
             </View>
@@ -170,7 +171,7 @@ export default class NewsScreen extends Component {
 
                         <View style={styles.innerView}>
                             <Octicons type='Octicons' name='calendar' size={16} color='#787878' />
-                            <Text style={[styles.textStyle2, { marginLeft: 6 }]}>Sunday - 2019.5.5</Text>
+                            <Text style={[styles.textStyle2, { marginRight: 6 }]}>Sunday - 2019.5.5</Text>
                         </View>
 
                         <View style={styles.lineStyle}></View>
@@ -203,17 +204,22 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2',
         paddingRight: 5,
         paddingLeft: 5,
-        borderRadius: 3
+        borderRadius: 3,
+        fontFamily: "helvetica-regular"
     },
     textStyle: { 
         fontWeight: 'bold',
         fontSize: 15,
-        marginBottom: 15
+        marginBottom: 15,
+        textAlign:"right",
+        fontFamily: "helvetica-regular"
     },
     textStyle2: {
         fontSize: 12,
         textAlign: 'justify',
-        color: '#787878'
+        color: '#787878',
+        textAlign:"right",
+        fontFamily: "helvetica-regular"
     },
     textStyle3: {
         fontSize: 12,
@@ -226,7 +232,7 @@ const styles = StyleSheet.create({
         marginTop: 30
     },
     innerView: {
-        flexDirection: 'row',
+        flexDirection: 'row-reverse',
         alignItems: 'center',
         marginTop: 15
     },

@@ -336,32 +336,32 @@ export default class Gifts extends Component {
                             <Text> {this.state.sliderValue} </Text> */}
 
                             {this.state.pointsBtn5 == true ?
-                                <View style={{ marginTop: -8 }}>
+                                <View style={{ marginTop: -8,alignSelf: 'flex-end', marginRight: '91%' }}>
                                     <Image resizeMode='contain' source={require('../../Images/HimmahLogo.png')} style={styles.logoStyle2} />
                                 </View> 
                                 :
                             this.state.pointsBtn55 == true ?
-                                <View style={{ marginTop: -8, marginLeft: '15%' }}>
+                                <View style={{ marginTop: -8, alignSelf: 'flex-end', marginRight: '76%' }}>
                                     <Image resizeMode='contain' source={require('../../Images/HimmahLogo.png')} style={styles.logoStyle2} />
                                 </View> 
                                 :
                             this.state.pointsBtn4 == true ?
-                                <View style={{ marginTop: -8, marginLeft: '31%' }}>
+                                <View style={{ marginTop: -8, alignSelf: 'flex-end', marginRight: '62%' }}>
                                     <Image resizeMode='contain' source={require('../../Images/HimmahLogo.png')} style={styles.logoStyle2} />
                                 </View> 
                                 :
                             this.state.pointsBtn3 == true ?
-                                <View style={{ marginTop: -8, alignSelf: 'center' }}>
+                                <View style={{ marginTop: -8, alignSelf: 'flex-end', marginRight: '46%' }}>
                                     <Image resizeMode='contain' source={require('../../Images/HimmahLogo.png')} style={styles.logoStyle2} />
                                 </View> 
                                 :
                             this.state.pointsBtn15 == true ?
-                                <View style={{ marginTop: -8, alignSelf: 'flex-end', marginRight: '31%' }}>
+                                <View style={{ marginTop: -8, alignSelf: 'flex-end', marginRight: '32%' }}>
                                     <Image resizeMode='contain' source={require('../../Images/HimmahLogo.png')} style={styles.logoStyle2} />
                                 </View> 
                                 :
                             this.state.pointsBtn2 == true ?
-                                <View style={{ marginTop: -8, alignSelf: 'flex-end', marginRight: '15%' }}>
+                                <View style={{ marginTop: -8, alignSelf: 'flex-end', marginRight: '16%' }}>
                                     <Image resizeMode='contain' source={require('../../Images/HimmahLogo.png')} style={styles.logoStyle2} />
                                 </View> 
                                 :
@@ -399,14 +399,14 @@ export default class Gifts extends Component {
                         </View>
                        {this.state.dataLoader == false &&
                        <View>
-                           <Text>جار التحميل...</Text>
+                           <Text style={styles.loadingText}>جار التحميل...</Text>
                         </View>
                        }
-                        {this.state.pointsBtn1 == true && this.state.dataLoader == true  ?
+                          {this.state.pointsBtn1 == true && this.state.dataLoader == true  ?
                             <View>
                                 <View style={styles.giftsImagesView}>
                                 <Container style={styles.itemContainer}>
-
+                                {/* <Text>this is button 1</Text> */}
                                 { this.state.fivetyPt.map( (item, key) =>
                                     <View style={styles.itemSingle} >
                                         <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -429,7 +429,7 @@ export default class Gifts extends Component {
                                  <View>
                                  <View style={styles.giftsImagesView}>
                                  <Container style={styles.itemContainer}>
- 
+                                 {/* <Text>this is button 2</Text> */}
                                  { this.state.fiveHuPt.map( (item, key) =>
                                      <View style={styles.itemSingle} >
                                          <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -439,7 +439,7 @@ export default class Gifts extends Component {
                                          </TouchableOpacity>
                                          <View style={styles.imageTitleView}>
                                          <Text style={styles.pointsTextStyle}>{item.reward_points}</Text>
-                                         <Text style={styles.giftTextStyle}>{item.reward_name_ara}</Text>
+                                         <Text style={styles.giftTextStyle}>{item.reward_name}</Text>
                                          </View>
                                      </View>
                                  )}
@@ -449,11 +449,11 @@ export default class Gifts extends Component {
                                 :null
                                 }
 
-                        {this.state.pointsBtn3 ?
+                        {this.state.pointsBtn15?
                              <View>
                              <View style={styles.giftsImagesView}>
                              <Container style={styles.itemContainer}>
-
+                             {/* <Text>this is button 3</Text> */}
                              { this.state.fivtenHuPt.map( (item, key) =>
                                  <View style={styles.itemSingle} >
                                      <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -463,7 +463,7 @@ export default class Gifts extends Component {
                                      </TouchableOpacity>
                                      <View style={styles.imageTitleView}>
                                      <Text style={styles.pointsTextStyle}>{item.reward_points}</Text>
-                                     <Text style={styles.giftTextStyle}>{item.reward_name_ara}</Text>
+                                     <Text style={styles.giftTextStyle}>{item.reward_name}</Text>
                                      </View>
                                  </View>
                              )}
@@ -473,12 +473,12 @@ export default class Gifts extends Component {
                             :
                             null
                         }
-
-                        {this.state.pointsBtn4 == true ?
+ 
+                        {this.state.pointsBtn3 == true ?
                              <View>
                              <View style={styles.giftsImagesView}>
                              <Container style={styles.itemContainer}>
-
+                             {/* <Text>this is button 4</Text> */}
                              { this.state.twentyFiveHuPt.map( (item, key) =>
                                  <View style={styles.itemSingle} >
                                      <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -488,7 +488,7 @@ export default class Gifts extends Component {
                                      </TouchableOpacity>
                                      <View style={styles.imageTitleView}>
                                      <Text style={styles.pointsTextStyle}>{item.reward_points}</Text>
-                                     <Text style={styles.giftTextStyle}>{item.reward_name_ara}</Text>
+                                     <Text style={styles.giftTextStyle}>{item.reward_name}</Text>
                                      </View>
                                  </View>
                              )}
@@ -499,11 +499,11 @@ export default class Gifts extends Component {
                             null
                         }
 
-                        {this.state.pointsBtn5 ?
+                        {this.state.pointsBtn4 ?
                              <View>
                              <View style={styles.giftsImagesView}>
                              <Container style={styles.itemContainer}>
-
+                             {/* <Text>this is button 5</Text> */}
                              { this.state.thirtyFivePt.map( (item, key) =>
                                  <View style={styles.itemSingle} >
                                      <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -513,7 +513,7 @@ export default class Gifts extends Component {
                                      </TouchableOpacity>
                                      <View style={styles.imageTitleView}>
                                      <Text style={styles.pointsTextStyle}>{item.reward_points}</Text>
-                                     <Text style={styles.giftTextStyle}>{item.reward_name_ara}</Text>
+                                     <Text style={styles.giftTextStyle}>{item.reward_name}</Text>
                                      </View>
                                  </View>
                              )}
@@ -524,11 +524,11 @@ export default class Gifts extends Component {
                             null
                         }
 
-                        {this.state.pointsBtn15  == true ?
+                        {this.state.pointsBtn55  == true ?
                                  <View>
                                  <View style={styles.giftsImagesView}>
                                  <Container style={styles.itemContainer}>
- 
+                                 {/* <Text>this is button 6</Text> */}
                                  { this.state.fiveFivtyFivePt.map( (item, key) =>
                                      <View style={styles.itemSingle} >
                                          <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -538,7 +538,7 @@ export default class Gifts extends Component {
                                          </TouchableOpacity>
                                          <View style={styles.imageTitleView}>
                                          <Text style={styles.pointsTextStyle}>{item.reward_points}</Text>
-                                         <Text style={styles.giftTextStyle}>{item.reward_name_ara}</Text>
+                                         <Text style={styles.giftTextStyle}>{item.reward_name}</Text>
                                          </View>
                                      </View>
                                  )}
@@ -547,11 +547,11 @@ export default class Gifts extends Component {
                              </View>
                                 :null
                                 }
-                                {this.state.pointsBtn55 == true  ?
+                                {this.state.pointsBtn5 == true  ?
                                  <View>
                                  <View style={styles.giftsImagesView}>
                                  <Container style={styles.itemContainer}>
- 
+                                 {/* <Text>this is button 7</Text> */}
                                  { this.state.oneLacPt.map( (item, key) =>
                                      <View style={styles.itemSingle} >
                                          <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -561,13 +561,13 @@ export default class Gifts extends Component {
                                          </TouchableOpacity>
                                          <View style={styles.imageTitleView}>
                                          <Text style={styles.pointsTextStyle}>{item.reward_points}</Text>
-                                         <Text style={styles.giftTextStyle}>{item.reward_name_ara}</Text>
+                                         <Text style={styles.giftTextStyle}>{item.reward_name}</Text>
                                          </View>
                                      </View>
                                  )}
                                  </Container>
                                  </View>
-                             </View>
+                                 </View>
                                 :null
                                 }
                     </Content>
@@ -582,7 +582,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2', 
         elevation: 0,
         height: 50,
-        marginTop: 23
+        marginTop: 0
     },
     itemContainer : {
         flexDirection: 'row',    
@@ -597,12 +597,19 @@ const styles = StyleSheet.create({
     titleStyle: { 
         color: '#323232', 
         fontSize: 16, 
-        alignSelf: 'center' 
+        alignSelf: 'center' ,
+        fontFamily: "helvetica-regular"
     },
     logoStyle: {
         width: 85,
         height: 100,
         marginTop: 15
+    },
+    loadingText:{
+        fontFamily: "helvetica-regular",
+        fontSize :15,
+        textAlign:"right",
+        marginRight:"5%"
     },
     logoStyle2: {
         width: 20,
@@ -615,11 +622,11 @@ const styles = StyleSheet.create({
         
     },
     textStyle: { 
-        fontWeight: 'bold',
         fontSize: 14,
         alignSelf: 'center',
         marginTop: 15,
-        color: '#323232'
+        color: '#323232',
+        fontFamily: "helvetica-bold"
     },
     lineStyle: {
         borderWidth: 0.5,
@@ -627,7 +634,7 @@ const styles = StyleSheet.create({
         marginTop: 15
     },
     btnStyle: {
-        width: '15%',
+        width: '14%',
         height: 20,
         alignItems: 'flex-end',
         justifyContent: 'flex-end',
@@ -636,7 +643,8 @@ const styles = StyleSheet.create({
     },
     btnTextStyle: {
         color: '#323232',
-        fontSize: 8
+        fontSize: 8,
+        fontFamily: "helvetica-regular"
     },
     pointsBtnView: { 
         flexDirection: 'row-reverse', 
@@ -671,7 +679,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 10,
         textAlign: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        fontFamily: "helvetica-regular"
     },
     giftTextStyle: {
         width: 75,
@@ -679,6 +688,7 @@ const styles = StyleSheet.create({
         color: '#28048c',
         // marginLeft: 2,
         textAlign: 'center',
+        fontFamily: "helvetica-regular"
         // backgroundColor: 'green'
     }
 })

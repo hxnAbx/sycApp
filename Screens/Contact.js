@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView,ScrollView, TextInput,Picker, } from 'react-native'
-import { Container, Content, Header, Button, Left, Body, Right, Title, Input, Item , Drawer} from 'native-base'
+import { Container, Content, Header,Button,  Left, Body, Right, Title, Input, Item , Drawer} from 'native-base'
 import Feather from 'react-native-vector-icons/Feather'
 import MapView from 'react-native-maps';
 import HomeButtons from './HomeButtons'
@@ -55,48 +55,50 @@ export default class Contact extends Component {
             
             <View style={styles.formWrapper}>
                 <View style={styles.formItemWrapper}>
-                    <Text style={styles.formLabel}>Name:</Text>
-                    <TextInput style={styles.TextInput}>
+                    <TextInput style={styles.TextInput}
+                    placeholder="Name"
+                    >
                         
                     </TextInput>
                 </View>
                 <View style={styles.formItemWrapper}>
-                    <Text style={styles.formLabel}>Email:</Text>
-                    <TextInput style={styles.TextInput}>
+                    <TextInput style={styles.TextInput}
+                    placeholder="Email">
                         
                     </TextInput>
                 </View>
                 <View style={styles.formItemWrapper}>
-                    <Text style={styles.formLabel}>Phone Number:</Text>
-                    <TextInput style={styles.TextInput}>
+                    <TextInput style={styles.TextInput}
+                    placeholder="Phone Number"
+                    >
                         
                     </TextInput>
                 </View>
                 <View style={styles.formItemWrapper}>
-                    <Text style={styles.formLabel}>City:</Text>
                     <View style={styles.PickerContainer}>
                         <Picker>
-                            <Picker.Item label="City 1" value="city1" />
-                            <Picker.Item label="City 2" value="city2" />
+                            <Picker.Item label="Survey" value="Survey" />
+                            <Picker.Item label="FeedBack" value="FeedBack" />
                         </Picker>
                     </View>
                     
                 </View>
                 <View style={styles.formItemWrapper}>
-                    <Text style={styles.formLabel}>Message:</Text>
-                    <TextInput style={styles.TextInput} >
+                    <TextInput style={styles.TextInput} 
+                    placeholder="Message"
+                    multiline
+                    numberOfLines={4}
+                    style={{height:200,borderWidth:1,borderColor:"#e1ecf4",textAlign:"left",textAlignVertical:"top"}}
+                    >
                         
                     </TextInput>
                 </View>
-                <View style={styles.formItemWrapper}>
-                    
-                <Button  style={styles.buttonContaier}>
-                <Text style={styles.button}>SEND </Text>
-                </Button>
-                </View>
+                
                 
             </View>
-            <View>
+            <View style={styles.row}>
+                <View style={styles.leftSide}>
+                <View>
               <Text style={styles.h1}>Contact us through our:</Text>
               
             </View>
@@ -127,12 +129,11 @@ export default class Contact extends Component {
                         />
                         
                     </View>
-                </View>
-                <View >
+                    <View >
                     <Text  style={styles.h2}>Following numbers:</Text>
                 </View>
                 <View>
-                    <Text  style={styles.p}>971561886685+ 97165933000+
+                    <Text  style={styles.p}>+971561886685, +97165933000
                     </Text>
                 </View>
                 <View>
@@ -141,6 +142,26 @@ export default class Contact extends Component {
                 <View>
                     <Text  style={styles.p}> info@sy.shj.ae</Text>
                 </View>
+                </View>
+                </View>
+                <View style={styles.righSide}>
+                <View style={styles.formItemWrapper}>
+                    
+                    <Button  style={styles.buttonContaier}>
+                    <Text style={styles.button}>SEND </Text>
+                    </Button>
+                    <Button  style={styles.buttonContaier} onPress={() => Actions.trackFeedBack() }>
+                    <Text style={styles.button}>Track FeedBack </Text>
+                    </Button>
+                    <Button  style={styles.buttonContaier} onPress={() => Actions.feedBackHistory() }>
+                    <Text style={styles.button}>FeedBack History </Text>
+                    </Button>
+                    </View>
+                </View>
+                
+            </View>
+            
+               
 
                 <View>
                
@@ -178,7 +199,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2', 
         elevation: 0,
         height: 50,
-        marginTop: 23
+        marginTop: 18,
+    },
+    righSide:{
+        width:"40%"
+    },
+    leftSide:{
+        width:"60%"
     },
     container: {
       backgroundColor: 'white'
@@ -265,13 +292,13 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "bold",
         margin: 5,
-        fontFamily: "helvetica-bold",
+        fontFamily: "helvetica-regular",
     },
     h2: {
         fontSize: 13,
         fontWeight: "bold",
         margin: 5,
-        fontFamily: "helvetica-bold",
+        fontFamily: "helvetica-regular",
     },
     manualSpace :{
         textAlign: "right",
@@ -297,9 +324,6 @@ const styles = StyleSheet.create({
     },
     footer: {
         textAlign: "center"
-    },
-    button: {
-        marginTop: 5
     },
     footerWrapper: {
         marginBottom: 50,
@@ -349,16 +373,17 @@ const styles = StyleSheet.create({
     buttonContaier:{
         textAlign:"center",
         alignItems:"center",
-        alignContent:"center"
+        alignContent:"center",
+        backgroundColor:"#000",
+        width:150,
+        marginTop:10,
+        textAlign:"center"
     },
     button: {
-        alignContent:"center",
-        alignSelf:"center",
-        marginLeft:'45%',
-        marginRight:'45%',
-        flex:1,
         color:"white",
+        textAlign:"center",
        fontFamily: "helvetica-regular",
+       width:"100%"
     },
     p: {
        fontFamily: "helvetica-light",
@@ -369,7 +394,8 @@ const styles = StyleSheet.create({
     },
     map :{
         height:220,
-        flex:1
+        flex:1,
+        marginTop:10
     }
 
   });

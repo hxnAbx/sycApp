@@ -405,7 +405,7 @@ export default class Gifts extends Component {
                             <View>
                                 <View style={styles.giftsImagesView}>
                                 <Container style={styles.itemContainer}>
-
+                                {/* <Text>this is button 1</Text> */}
                                 { this.state.fivetyPt.map( (item, key) =>
                                     <View style={styles.itemSingle} >
                                         <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -428,7 +428,7 @@ export default class Gifts extends Component {
                                  <View>
                                  <View style={styles.giftsImagesView}>
                                  <Container style={styles.itemContainer}>
- 
+                                 {/* <Text>this is button 2</Text> */}
                                  { this.state.fiveHuPt.map( (item, key) =>
                                      <View style={styles.itemSingle} >
                                          <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -448,11 +448,11 @@ export default class Gifts extends Component {
                                 :null
                                 }
 
-                        {this.state.pointsBtn3 ?
+                        {this.state.pointsBtn15?
                              <View>
                              <View style={styles.giftsImagesView}>
                              <Container style={styles.itemContainer}>
-
+                             {/* <Text>this is button 3</Text> */}
                              { this.state.fivtenHuPt.map( (item, key) =>
                                  <View style={styles.itemSingle} >
                                      <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -472,12 +472,12 @@ export default class Gifts extends Component {
                             :
                             null
                         }
-
-                        {this.state.pointsBtn4 == true ?
+ 
+                        {this.state.pointsBtn3 == true ?
                              <View>
                              <View style={styles.giftsImagesView}>
                              <Container style={styles.itemContainer}>
-
+                             {/* <Text>this is button 4</Text> */}
                              { this.state.twentyFiveHuPt.map( (item, key) =>
                                  <View style={styles.itemSingle} >
                                      <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -498,11 +498,11 @@ export default class Gifts extends Component {
                             null
                         }
 
-                        {this.state.pointsBtn5 ?
+                        {this.state.pointsBtn4 ?
                              <View>
                              <View style={styles.giftsImagesView}>
                              <Container style={styles.itemContainer}>
-
+                             {/* <Text>this is button 5</Text> */}
                              { this.state.thirtyFivePt.map( (item, key) =>
                                  <View style={styles.itemSingle} >
                                      <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -523,11 +523,11 @@ export default class Gifts extends Component {
                             null
                         }
 
-                        {this.state.pointsBtn15  == true ?
+                        {this.state.pointsBtn55  == true ?
                                  <View>
                                  <View style={styles.giftsImagesView}>
                                  <Container style={styles.itemContainer}>
- 
+                                 {/* <Text>this is button 6</Text> */}
                                  { this.state.fiveFivtyFivePt.map( (item, key) =>
                                      <View style={styles.itemSingle} >
                                          <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -546,11 +546,11 @@ export default class Gifts extends Component {
                              </View>
                                 :null
                                 }
-                                {this.state.pointsBtn55 == true  ?
+                                {this.state.pointsBtn5 == true  ?
                                  <View>
                                  <View style={styles.giftsImagesView}>
                                  <Container style={styles.itemContainer}>
- 
+                                 {/* <Text>this is button 7</Text> */}
                                  { this.state.oneLacPt.map( (item, key) =>
                                      <View style={styles.itemSingle} >
                                          <TouchableOpacity onPress={() => this.saveGiftid(item.reward_id)}>
@@ -581,7 +581,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2', 
         elevation: 0,
         height: 50,
-        marginTop: 23
+        marginTop: 0
     },
     itemContainer : {
         flexDirection: 'row',    

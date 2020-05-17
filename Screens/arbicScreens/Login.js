@@ -129,7 +129,7 @@ export default class Login extends Component {
                         
                         <View>
                             <View>
-                                <Text style={{ fontSize: 10 }}>اسم المستخدم*</Text>
+                                <Text style={{ fontSize: 10,textAlign:"right", fontFamily: "helvetica-regular" }}>اسم المستخدم*</Text>
                             </View>
 
                             <Item regular style={styles.inputItemStyle}>
@@ -142,7 +142,7 @@ export default class Login extends Component {
 
                         <View style={{ marginTop: 5 }}>
                             <View>
-                                <Text style={{ fontSize: 10 }}>كلمة المرور*</Text>
+                                <Text style={{ fontSize: 10,textAlign:"right",  fontFamily: "helvetica-regular"}}>كلمة المرور*</Text>
                             </View>
 
                             <Item regular style={styles.inputItemStyle}>
@@ -221,11 +221,13 @@ const styles = StyleSheet.create({
     },
     inputTextStyle: { 
         textAlign: 'center', 
-        fontSize: 10 
+        fontSize: 10 ,
+        fontFamily: "helvetica-regular"
     },
     forgotTextStyle: { 
         fontSize: 10, 
-        fontWeight: 'bold' 
+        fontWeight: 'bold' ,
+        fontFamily: "helvetica-regular"
     },
     btnsView: { 
         width: '70%',
@@ -237,7 +239,7 @@ const styles = StyleSheet.create({
     },
     btnStyle2: {
         width: 67,
-        height: 22,
+        height: 30,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#4d4e4e',
@@ -246,6 +248,7 @@ const styles = StyleSheet.create({
     },
     btnTextStyle2: {
         color: '#fff',
-        fontSize: 10
+        fontSize: 10,
+        fontFamily: "helvetica-regular"
     }
 })

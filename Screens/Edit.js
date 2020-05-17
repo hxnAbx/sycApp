@@ -260,7 +260,7 @@ const styles = StyleSheet.create({
     },
     btnStyle:{
         backgroundColor : "grey",
-        height:20
+        height:34
     },
     btnTextStyle2: {
         color: '#fff',

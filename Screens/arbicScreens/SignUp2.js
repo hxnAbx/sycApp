@@ -89,7 +89,7 @@ export default class SignUp2 extends Component {
                         <View style={styles.innerView}>
                             <View style={styles.innerView2}>
                                 <View>
-                                    <Text style={{ fontSize: 10, fontWeight: '200' }}> صلة القرابة بولي الأمر</Text>
+                                    <Text style={{ fontSize: 10, fontWeight: '200' , fontFamily: "helvetica-regular" , textAlign:"right" }}> صلة القرابة بولي الأمر</Text>
                                 </View>
 
                                 <View style={styles.pickerView}>
@@ -110,7 +110,7 @@ export default class SignUp2 extends Component {
                             </View>  
                             <View style={styles.innerView2}>
                                 <View>
-                                    <Text style={{ fontSize: 10, fontWeight: '200' }}> الاسم الأول</Text>
+                                    <Text style={{ fontSize: 10, fontWeight: '200' , fontFamily: "helvetica-regular" , textAlign:"right" }}> الاسم الأول</Text>
                                 </View>
 
                                 <Item regular style={styles.inputItemStyle}>
@@ -124,7 +124,7 @@ export default class SignUp2 extends Component {
                         <View style={styles.innerView}>
                             <View style={styles.innerView2}>
                                 <View>
-                                    <Text style={{ fontSize: 10, fontWeight: '200' }}> اسم الأب</Text>
+                                    <Text style={{ fontSize: 10, fontWeight: '200' , fontFamily: "helvetica-regular" , textAlign:"right" }}> اسم الأب</Text>
                                 </View>
 
                                 <Item regular style={styles.inputItemStyle}>
@@ -135,7 +135,7 @@ export default class SignUp2 extends Component {
                             </View>  
                             <View style={styles.innerView2}>
                                 <View>
-                                    <Text style={{ fontSize: 10, fontWeight: '200' }}> اسم العائلة</Text>
+                                    <Text style={{ fontSize: 10, fontWeight: '200' , fontFamily: "helvetica-regular" , textAlign:"right" }}> اسم العائلة</Text>
                                 </View>
 
                                 <Item regular style={styles.inputItemStyle}>
@@ -149,7 +149,7 @@ export default class SignUp2 extends Component {
                         <View style={styles.innerView}>
                             <View style={styles.innerView2}>
                                 <View>
-                                    <Text style={{ fontSize: 10, fontWeight: '200' }}> رقم بطاقة الهوية الإماراتية لولي الأمر</Text>
+                                    <Text style={{ fontSize: 10, fontWeight: '200' , fontFamily: "helvetica-regular" , textAlign:"right"}}> رقم بطاقة الهوية الإماراتية لولي الأمر</Text>
                                 </View>
 
                                 <Item regular style={styles.inputItemStyle}>
@@ -160,7 +160,7 @@ export default class SignUp2 extends Component {
                             </View>  
                             <View style={styles.innerView2}>
                                 <View>
-                                    <Text style={{ fontSize: 10, fontWeight: '200' }}> رقم بطاقة الهوية الإماراتية لولي الأمر</Text>
+                                    <Text style={{ fontSize: 10, fontWeight: '200', fontFamily: "helvetica-regular" , textAlign:"right" }}> رقم بطاقة الهوية الإماراتية لولي الأمر</Text>
                                 </View>
 
                                 <Item regular style={[styles.inputItemStyle, { paddingRight: 5 }]}>
@@ -174,7 +174,7 @@ export default class SignUp2 extends Component {
 
                         <View style={styles.viewStyle}>
                             <View>
-                                <Text style={{ fontSize: 10, fontWeight: '200' }}>رقم هاتف ولي الأمر</Text>
+                                <Text style={{ fontSize: 10, fontWeight: '200' , fontFamily: "helvetica-regular" , textAlign:"right"}}>رقم هاتف ولي الأمر</Text>
                             </View>
 
                             <Item regular style={styles.inputItemStyle}>
@@ -187,7 +187,7 @@ export default class SignUp2 extends Component {
 
                         <View style={styles.viewStyle}>
                             <View>
-                                <Text style={{ fontSize: 10 }}> البريد الإلكتروني لولي الأمر</Text>
+                                <Text style={{ fontSize: 10 , fontFamily: "helvetica-regular" , textAlign:"right"}}> البريد الإلكتروني لولي الأمر</Text>
                             </View>
 
                             <Item regular style={styles.inputItemStyle}>
@@ -200,7 +200,7 @@ export default class SignUp2 extends Component {
 
                         <View style={styles.viewStyle}>
                             <View>
-                                <Text style={{ fontSize: 10 }}> الاسم للتواصل في الحالات الطارئة</Text>
+                                <Text style={{ fontSize: 10 , fontFamily: "helvetica-regular" , textAlign:"right"}}> الاسم للتواصل في الحالات الطارئة</Text>
                             </View>
 
                             <Item regular style={styles.inputItemStyle}>
@@ -212,7 +212,7 @@ export default class SignUp2 extends Component {
 
                         <View style={styles.viewStyle}>
                             <View>
-                                <Text style={{ fontSize: 10, fontWeight: '200' }}> رقم الهاتف للتواصل في الحالات الطارئة</Text>
+                                <Text style={{ fontSize: 10, fontWeight: '200', fontFamily: "helvetica-regular" , textAlign:"right" }}> رقم الهاتف للتواصل في الحالات الطارئة</Text>
                             </View>
 
                             <Item regular style={styles.inputItemStyle}>
@@ -226,7 +226,7 @@ export default class SignUp2 extends Component {
                         <View style={styles.innerView}>
                             <View style={styles.innerView2}>
                                 <View>
-                                    <Text style={{ fontSize: 10, fontWeight: '200' }}> طريقة التواصل المفضلة </Text>
+                                    <Text style={{ fontSize: 10, fontWeight: '200', fontFamily: "helvetica-regular" , textAlign:"right" }}> طريقة التواصل المفضلة </Text>
                                 </View>
 
                                 <View style={styles.pickerView}>
@@ -246,7 +246,7 @@ export default class SignUp2 extends Component {
                             </View>  
                             <View style={styles.innerView2}>
                                 <View>
-                                    <Text style={{ fontSize: 10, fontWeight: '200' }}>أين تعرّفت علينا؟</Text>
+                                    <Text style={{ fontSize: 10, fontWeight: '200'  , fontFamily: "helvetica-regular" , textAlign:"right"}}>أين تعرّفت علينا؟</Text>
                                 </View>
 
                                 <View style={styles.pickerView}>
@@ -268,7 +268,7 @@ export default class SignUp2 extends Component {
 
                         <View style={styles.viewStyle}>
                             <View>
-                                <Text style={{ fontSize: 10, fontWeight: '200' }}>الظهور الإعلامي (التلفزيون، الصحف، الموقع الإلكتروني، مواقع التواصل</Text>
+                                <Text style={{ fontSize: 10, fontWeight: '200' , fontFamily: "helvetica-regular" , textAlign:"right" }}>الظهور الإعلامي (التلفزيون، الصحف، الموقع الإلكتروني، مواقع التواصل</Text>
                             </View>
 
                             <View style={styles.pickerView}>
@@ -288,7 +288,7 @@ export default class SignUp2 extends Component {
                         </View> 
 
                         <Button style={styles.btnStyle2} onPress={this.onClickTwo}>
-                            <Text style={styles.btnTextStyle2}>Next</Text>
+                            <Text style={styles.btnTextStyle2}>التالى</Text>
                         </Button>
                     </View>
                 </Content>
@@ -302,13 +302,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2', 
         elevation: 0,
         height: 50,
-        marginTop: 23
+        marginTop: 0
     },
     titleStyle: { 
         color: '#323232', 
         fontSize: 16, 
         alignSelf: 'center',
-        fontWeight: '400'
+        fontWeight: '400',
+        fontFamily: "helvetica-regular",
+        textAlign:"right"
     },
     mainView: {
         width: '85%',
@@ -329,7 +331,9 @@ const styles = StyleSheet.create({
     textStyle: { 
         fontWeight: '400',
         fontSize: 14,
-        marginBottom: 5
+        marginBottom: 5,
+        textAlign:"right",
+        fontFamily: "helvetica-regular",
     },
     inputItemStyle: {
         marginTop: 4,
@@ -338,7 +342,8 @@ const styles = StyleSheet.create({
         paddingRight: 8
     },
     inputTextStyle: { 
-        fontSize: 10 
+        fontSize: 10 ,
+         fontFamily: "helvetica-regular" , textAlign:"right"
     },
     pickerStyle: { 
         elevation: 1, 
@@ -352,7 +357,7 @@ const styles = StyleSheet.create({
     },
     btnStyle2: {
         width: 120,
-        height: 30,
+        height: 35,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#4d4d4d',
@@ -365,7 +370,7 @@ const styles = StyleSheet.create({
     btnTextStyle2: {
         color: '#fff',
         fontSize: 12,
-        fontWeight: 'bold'
+        fontFamily: "helvetica-bold"
     },
     pickerView: { 
         backgroundColor: '#ffffff', 

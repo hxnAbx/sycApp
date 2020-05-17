@@ -89,12 +89,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2', 
         elevation: 0,
         height: 50,
-        marginTop: 23
+        marginTop: 0
     },
     titleStyle: { 
         color: '#323232', 
         fontSize: 16, 
-        alignSelf: 'center' 
+        alignSelf: 'center',
+        fontFamily: "helvetica-regular"
     },
     logoStyle: {
         width: 85,
@@ -106,27 +107,31 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
     },
     textStyle: { 
-        fontWeight: 'bold',
         fontSize: 14,
         alignSelf: 'center',
         marginTop: 15,
-        color: '#323232'
+        color: '#323232',
+        fontFamily: "helvetica-bold"
+
     },
     textStyle2: {
         fontSize: 12,
         textAlign: 'center',
         color: '#787878',
-        marginTop: 15
+        marginTop: 15,
+        fontFamily: "helvetica-regular"
     },
     textStyle3: {
         fontSize: 12,
-        color: '#787878'
+        color: '#787878',
+        fontFamily: "helvetica-regular"
     },
     textStyle4: {
         fontSize: 12,
         color: '#787878',
         textDecorationLine: 'underline',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: "helvetica-regular"
     },
     btnsView: { 
         flexDirection: 'row',
@@ -136,7 +141,7 @@ const styles = StyleSheet.create({
     btnStyle: {
         alignSelf: 'center',
         width: 100,
-        height: 25,
+     height:30,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#4d4d4d',
@@ -148,11 +153,12 @@ const styles = StyleSheet.create({
     btnTextStyle: {
         color: '#fff',
         fontSize: 10,
-        fontWeight: 'bold'
+        fontFamily: "helvetica-bold"
     },
     bottomTextView: {
         flexDirection: 'row',
-        marginBottom: 15
+        marginBottom: 15,
+        fontFamily: "helvetica-regular"
     },
     img2: {
         width: "100%",
